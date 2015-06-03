@@ -972,53 +972,10 @@
 	document_type = {Article},
 	source = {Scopus}
 }
-@ARTICLE{PNML-Billington2003483,
-	author={Billington, J.a  and Christensen, S.b  and Van Hee, K.c  and Kindler, E.d  and Kummer, O.e  and Petrucci, L.f  and Post, R.c  and Stehno, C.g  and Weber, M.h },
-	title={The Petri net markup language: Concepts, technology, and tools},
-	journal={Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
-	year={2003},
-	volume={2679},
-	pages={483-505},
-	note={cited By 99},
-	url={http://www.scopus.com/inward/record.url?eid=2-s2.0-35248854880&partnerID=40&md5=82ea4c455b0683b147cbf9f8a5b1a557},
-	affiliation={University of South Australia, Computer Systems Engineering Centre, Australia; University of Aarhus, Department of Computer Science, Denmark; Technische Universiteit Eindhoven, Department of Math. and Computer Science, Netherlands; University of Paderborn, Department of Computer Science, Germany; CoreMedia AG, Germany; Laboratoire Specification et Vérification, CNRS UMR 8643, ENS de Cachan, France; Carl von Ossietzky University Oldenburg, Department of Computing Science, Germany; Humboldt-Universität zu Berlin, Computer Science Department, Germany},
-	abstract={The Petri Net Markup Language (PNML) is an XML-based interchange format for Petri nets. In order to support different versions of Petri nets and, in particular, future versions of Petri nets, PNML allows the definition of Petri net types. Due to this flexibility, PNML is a starting point for a standard interchange format for Petri nets. This paper discusses the design principles, the basic concepts, and the underlying XML technology of PNML. The main purpose of this paper is to disseminate the ideas of PNML and to stimulate discussion on and contributions to a standard Petri net interchange format. © Springer-Verlag Berlin Heidelberg 2003.},
-	document_type={Short Survey},
-	source={Scopus},
-}
-@inproceedings{PNML-Hillah2006307,
-  author    = {Lom Hillah and
-               Fabrice Kordon and
-               Laure Petrucci{-}Dauchy and
-               Nicolas Tr{\`{e}}ves},
-  title     = {{PN} Standardisation: {A} Survey},
-  booktitle = {Formal Techniques for Networked and Distributed Systems - {FORTE}
-               2006, 26th {IFIP} {WG} 6.1 International Conference, Paris, France,
-               September 26-29, 2006.},
-  pages     = {307--322},
-  year      = {2006},
-  crossref  = {DBLP:conf/forte/2006},
-  url       = {http://dx.doi.org/10.1007/11888116_23},
-  doi       = {10.1007/11888116_23},
-  timestamp = {Tue, 24 Oct 2006 16:14:14 +0200},
-  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/forte/HillahKPT06},
-  bibsource = {dblp computer science bibliography, http://dblp.org}
-}
-@Misc{PNML-pnml.org,
-	title = {Pnml.org - PNML reference site},
-	year = 2009,
-	note = {[Online; accessed 21-May-2015]},
-	url = {http://www.pnml.org/}
-}
-@Misc{PNML-iso/iec-15909-1,
-	title = {ISO/IEC 15909-1:2004 - Systems and software engineering -- High-level Petri nets -- Part 1: Concepts, definitions and graphical notation},
-	year = 2004,
-	note = {[Online; accessed 21-May-2015]},
-	url = {http://www.iso.org/iso/catalogue_detail.htm?csnumber=43538}
-}
-@Misc{PNML-iso/iec-15909-2:2011,
-	title = {ISO/IEC 15909-2:2011 - Systems and software engineering -- High-level Petri nets -- Part 2: Transfer format},
-	year = 2011,
-	note = {[Online; accessed 21-May-2015]},
-	url = {http://www.iso.org/iso/catalogue_detail.htm?csnumber=43538}
+@misc{PNML-url,
+  author = {Ingo Lütkebohle},
+  title = {{BWorld Robot Control Software}},
+  howpublished = "\url{http://aiweb.techfak.uni-bielefeld.de/content/bworld-robot-control-software/}",
+  year = {2008}, 
+  note = "[Online; accessed 19-July-2008]"
 }

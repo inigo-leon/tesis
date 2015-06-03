@@ -31,6 +31,19 @@
 
 \usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers'
 
+%Para poner colores en los ficheros xml
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\lstset{language=XML,
+        basicstyle=\ttfamily\scriptsize
+        }
+\usepackage{alltt}
+\usepackage{ulem}
+
+%Para usar múltiples columnas
+\usepackage{multicol} 
+\setlength{\columnsep}{7mm}
+
+
 \hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
 \title{\ttitle} % Defines the thesis title - don't touch this
 \usepackage{shortlst}
@@ -118,7 +131,7 @@ I, \authornames, declare that this thesis titled, '\ttitle' and the work present
 Signed:\\
 \rule[1em]{25em}{0.5pt} % This prints a line for the signature
  
-Date:\\
+Date: \today \\
 \rule[1em]{25em}{0.5pt} % This prints a line to write the date
 }
 
@@ -132,7 +145,7 @@ Date:\\
 
 \null\vfill % Add some space to move the quote down the page a bit
 
-\textit{``Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism."}
+\textit{```Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism."}
 
 \begin{flushright}
 Dave Barry
@@ -150,7 +163,8 @@ Dave Barry
 
 \abstract{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
 
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+El abstract debe caber en esta pagina, centrada verticalmente. Debe comenzar
+o contener "My original contribution to knowledge is\dots"
 }
 
 \clearpage % Start a new page
@@ -163,7 +177,13 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 
 \acknowledgements{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
 
-The acknowledgements and the people to thank go here, don't forget to include your project advisor\ldots
+//BORRAR The acknowledgements and the people to thank go here, don't forget to include your project advisor\ldots
+
+Thanks to my years of personal study and my curiosity for new knowledge,
+I fought to combine my job, my family and studies. I has been a difficult work, but the result has been worth it.
+
+//TODO
+
 }
 \clearpage % Start a new page
 
@@ -179,8 +199,8 @@ The acknowledgements and the people to thank go here, don't forget to include yo
 \lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
 \listoffigures % Write out the List of Figures
 
-\lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
-\listoftables % Write out the List of Tables
+%\lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
+%\listoftables % Write out the List of Tables
 
 %----------------------------------------------------------------------------------------
 %       ABBREVIATIONS
@@ -193,43 +213,44 @@ The acknowledgements and the people to thank go here, don't forget to include yo
 \lhead{\emph{Abbreviations}} % Set the left side page header to "Abbreviations"
 \listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
 {
-\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere \\
-%\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+\textbf{PN} & \textbf{P}etri \textbf{N}et \\
+\textbf{SN} & \textbf{S}ub\textbf{N}et \\
+...         & //TODO
 }
 
 %----------------------------------------------------------------------------------------
 %       PHYSICAL CONSTANTS/OTHER DEFINITIONS
 %----------------------------------------------------------------------------------------
 
-\clearpage % Start a new page
+%\clearpage % Start a new page
 
-\lhead{\emph{Physical Constants}} % Set the left side page header to "Physical Constants"
+%\lhead{\emph{Physical Constants}} % Set the left side page header to "Physical Constants"
 
-\listofconstants{lrcl} % Include a list of Physical Constants (a four column table)
-{
-Speed of Light & $c$ & $=$ & $2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$ (exact)\\
+%\listofconstants{lrcl} % Include a list of Physical Constants (a four column table)
+%{
+%Speed of Light & $c$ & $=$ & $2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$ (exact)\\
 % Constant Name & Symbol & = & Constant Value (with units) \\
-}
+%}
 
 %----------------------------------------------------------------------------------------
 %       SYMBOLS
 %----------------------------------------------------------------------------------------
 
-\clearpage % Start a new page
+%\clearpage % Start a new page
 
-\lhead{\emph{Symbols}} % Set the left side page header to "Symbols"
+%\lhead{\emph{Symbols}} % Set the left side page header to "Symbols"
 
-\listofnomenclature{lll} % Include a list of Symbols (a three column table)
-{
-$a$ & distance & m \\
-$P$ & power & W (Js$^{-1}$) \\
+%\listofnomenclature{lll} % Include a list of Symbols (a three column table)
+%{
+%$a$ & distance & m \\
+%$P$ & power & W (Js$^{-1}$) \\
 % Symbol & Name & Unit \\
 
-& & \\ % Gap to separate the Roman symbols from the Greek
+%& & \\ % Gap to separate the Roman symbols from the Greek
 
-$\omega$ & angular frequency & rads$^{-1}$ \\
+%$\omega$ & angular frequency & rads$^{-1}$ \\
 % Symbol & Name & Unit \\
-}
+%}
 
 %----------------------------------------------------------------------------------------
 %       DEDICATION
@@ -254,11 +275,11 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
 
-\input{Chapters/Chapter1}
-\input{Chapters/Chapter2} 
-\input{Chapters/Chapter3}
-\input{Chapters/Chapter4} 
-%\input{Chapters/Chapter5} 
+\input{Chapters/Introduction}
+\input{Chapters/LiteratureReview} 
+\input{Chapters/PrivateInformation} 
+\input{Chapters/PNML}
+\input{Chapters/XMLEncryption} 
 %\input{Chapters/Chapter6} 
 %\input{Chapters/Chapter7} 
 \input{Chapters/Conclusions} 
@@ -291,8 +312,8 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 
 \lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
 
-\bibliographystyle{acm} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+\bibliographystyle{unsrtnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
 
 \bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
-
+\textbf{Faltan las referencias de paginas web}
 \end{document}  

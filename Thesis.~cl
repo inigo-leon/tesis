@@ -173,7 +173,6 @@
 \newcommand*{\subject}[1]{\def\subjectname{#1}}
 \newcommand*{\keywords}[1]{\def\keywordnames{#1}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Mis variables y definiciones
 
 \newtheorem*{note}{Note}
@@ -182,10 +181,9 @@
 \renewcommand{\kbldelim}{(} %Delimitador de inicio de kbordermatrix (
 \renewcommand{\kbrdelim}{)} %Delimitador de final de kbordermatrix )
 
-\lstset{language=XML}
+\usepackage{ulem} %Para tachar y subrayar texto
 
 %Fin Mis variables y definiciones
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Para el código XML
 \lstdefinelanguage{XML}

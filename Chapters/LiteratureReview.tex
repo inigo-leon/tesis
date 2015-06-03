@@ -1,0 +1,87 @@
+% Chapter Template
+
+\chapter{Literature review} % Main chapter title
+
+\label{LiteratureReview} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\lhead{Chapter 2. \emph{Literature review}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+//BORRAR
+
+\begin{itemize}
+ \item G - Petri nets general
+ \item SM - Simulacion de modelos
+ \item EPN - Extensiones de Petri nets originales
+ \item R - Reduccion de redes
+ \item SN - Subredes
+ \item REP - Representation
+ \item PROP - Propiedades de PN
+ \item HID - Ocultacion de partes
+ \item PNML - PNML
+ \item PNMLE - Extensiones PNML
+
+\end{itemize}
+
+//
+
+In this chapter I am going to go over the ancient Petri net history. 
+This work is a very basic investigation 
+on Petri nets. This means that the most of the references are very general.
+
+For this literature review, I will follow the structure of this thesis:
+
+\begin{enumerate}
+\item First of all, I am going to describe some generalities of Petri nets
+as an introduction\item Then I will describe subnets and the process of splitting Petri nets
+into several subnets. Some of those subnets are going to be hidden 
+\item The next step is to explain some possible Petri net representations
+and my selection of PNML for the hiding process
+\item Once selected PNML, I am going to extend this language to support the
+subnets defined before
+\item The last step is the hiding properly speaking. To do this, I will use the standard XMLEncryption for ciphering the secret information
+\end{enumerate}
+
+\section{Introduction. Petri nets}
+
+In the 60's, Carl Adam Petri invented a new way to describe distributed systems
+called Petri nets \cite{G-Petri1962PhD,G-Petri1966,G-Petri1976}. Many net
+theories
+are based on those works\cite{G-Petri2007}. Nowadays,
+Petri nets are really extended to represent discrete systems \cite{SM-Holloway1997151,EPN-SM-Latorre2010152,EPN-SM-Latorre2010247,EPN-SM-Silva2011427}. There are lots of applications
+of Petri nets:
+
+\begin{itemize}
+\item Modelling of sequential processes\cite{SM-Recalde1998267}, concurrent
+systems\cite{EPN-SM-Jensen2007213,EPN-SM-Kristensen200819}, manufacturing \cite{G-Silva1989374,SM-Desrochers2010,SM-Silva19931,SM-Silva1997182,G-Silva1989374}, logistic
+processes \cite{SM-Guasch2002},...
+\item Simulation of industrial applications \cite{SM-Jimenez2006159,SM-Latorre2013346}, logistic and production systems \cite{SM-Jimenez2004143},...
+\end{itemize} 
+
+//TODO Incluir mas aplicaciones de las redes de Petri
+
+This work is not about of Petri net application, so I am not
+going to deepen this field. 
+However I really mind the intrinsic structure of them. Since the definition
+of Petri nets,
+many authors investigated about them. The basic basis of my work are some of the best Petri net researchers, who are included in this review:
+\begin{itemize}
+\item Murata, T \cite{G-Murata1977412,G-SM-Murata19772,G-Murata1989541}
+\item Silva, M \cite{G-Silva1985,G-Silva1993,G-Silva201213}
+\item Peterson, JL \cite{G-EPN-Peterson1981}
+\end{itemize} 
+
+And not only general Petri nets. Any kind of extensions are well received
+\begin{itemize}
+\item Jensen, K \cite{EPN-SM-Jensen2007213,G-EPN-Jensen1985723}
+\item ...
+
+\end{itemize}
+
+\section{Subnets}
+\section{Petri nets representation. PNML}
+\section{PNML extension for hiding support}
+\section{Hide information on Petri nets. XMLEncryption}
+
+
+
+

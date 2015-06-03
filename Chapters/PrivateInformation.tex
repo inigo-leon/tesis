@@ -1,23 +1,36 @@
 % Chapter Template
 
-\chapter{Petri subnets} % Main chapter title
+\chapter{Private information in Petri nets. Subnets} % Main chapter title
 
-\label{Chapter2} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+\label{Chapter3} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-\lhead{Chapter 2. \emph{Petri subnets}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+\lhead{Chapter 3. \emph{Private information in Petri nets. Subnets}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
 %----------------------------------------------------------------------------------------
 %       SECTION 1
 %----------------------------------------------------------------------------------------
 
-\section{Definitions and properties}
+\section{Introduction}
+By default, a Petri net is described in a comprehensive and public way.
+In this chapter I am going to describe a way to declare private information of a Petri net.
+This information is candidate to be hidden.
+
+
+First of all I have to create a like framework of definitions, properties
+and methodologies in order to achieve this goal. The main idea is the concept
+of subnet an its interaction front-end.
+
+Once defined this subnets, the Petri net can be divided into public and private
+chunks only by ordering the places and transitions in one subnet or another. \section{Petri subnets}
+
+\subsection{Definitions and properties}
 
 Let $ P $ and $ T $ the non-empty finite sets of places and
 transitions of a Petri net, respectively. Let $ | P | = n $ (the number of places
 of the net) and $ | T | = m $ (number of transitions of the net). Let $ \alpha $ and $ \beta $ pre and post incidence matrices respectively. Let $ N = \langle P, T, \alpha, \beta \rangle $ be a
 Petri net and let $ C $ the incidence matrix of $ N $
 
-\begin{definition}[Subnet \cite{silva}]
+\begin{definition}[Subnet \cite{G-Silva1985}]
 A subnet of $N=\langle P,T,\alpha,\beta\rangle$
 is a net $\overline{N}=\langle\overline{P},\overline{T},\overline{\alpha},\overline{\beta}\rangle$
 so that $\overline{P}\subseteq P$ y $\overline{T}\subseteq T$, $\overline{\alpha}$
@@ -30,7 +43,7 @@ together with the arches that connect them together.
 Let's look at the implications of the latter definition
 since it is one of the most important with regard to this work.
 
-A subnet corresponds \cite{inigo}, matrixed, with the resulting submatrix keeping only the rows and columns corresponding to places and transitions of the selected subnet.
+A subnet corresponds \cite{HID-Inigo2011MT}, in terms of matrices, with the resulting submatrix keeping only the rows and columns corresponding to places and transitions of the selected subnet.
 \begin{example} Let's take the Petri net which has the following incidence matrix:
 \[
 C=
@@ -62,7 +75,7 @@ p_5&0 & 1 & 1 \\
 by simply erasing $p_2$ and $p_6$ rows and $t_3$, $t_4$ and $t_5$ columns.
 \end{example}
 
-In \cite {inigo} is shown that the set of all
+In \cite{HID-Inigo2011MT} is shown that the set of all
 possible permutations of rows and/or columns of a matrix of incidence
 corresponding to a Petri net, either the prev or post incidence matrix, make an equivalence relation. In other words, given an incidence matrix, both rows and columns can be rearranged
  and this rearrangement describes exactly the original Petri net.
@@ -109,11 +122,15 @@ trivial conclusions:
 \item A subnet, like generic Petri net does not have to be square.
 \item If a row or column of the incidence matrix of the subnet is all zeros, it doesn't
 mean that that place or that transition is isolated. This occurs only with pure nets.
-\item It does not matter the number of places and/or transitions that are chosen
-for the subnet, if they are not empty sets. 
+//TODO\ EJEMPLO/FIGURA\item It does not matter the number of places and/or transitions that are chosen
+for the subnet, as long as they are not empty sets. 
 \end{enumerate}
 
-\section{Splitting a net into subnets}
+
+
+
+
+\subsection{Splitting a net into subnets}
 
 Let $N=\langle P,T,\alpha\beta\rangle$ a Petri net where $|P|=n$
 and $|T|=m$. So $P=\{p_{1},p_{2}...p_{n}\}$ and $T=\{t_{1},t_{2}...t_{m}\}$.
@@ -123,7 +140,7 @@ divide into two subnets the original one.
 
 We have seen that we can identify a subnet simply removing
 rows and columns (places/transitions) of an incidence matrix.
-Taking advantage of the equivalence relation defined in \cite{inigo},
+Taking advantage of the equivalence relation defined in \cite{HID-Inigo2011MT},
 we reorder the incidence matrix so that places and transitions of the subnet
 are in the top-left.
 Without loss of
@@ -231,11 +248,11 @@ We say that a set $ P = \{N_1 N_2 ... N_k \} $ is a partition into subnets of $ 
 
 
 
-\section{Subnet classification}
+\subsection{Subnet classification}
 
 Depending on how each of the four pieces of matrix ($N_1$, $N_2$, $PIM$ and $TIM$) are, we can see some special cases.
 
-\subsection{Disjointed subnets}
+\subsubsection{Disjointed subnets}
 
 
 \begin{definition}[Disjointed subnet]
@@ -290,7 +307,7 @@ We can extend this definition to a subnet that is part of a bigger net. It
 doesn't matter in how many subnets it is separated: if one subnet is the null
 matrix, this subnet is disjointed. This characteristic is implicit to the selected subnet and it doesn't depend on the rest of the net.
 
-\subsection{Macroplace}
+\subsubsection{Macroplace}
 
 //TODO Introduccion
 \begin{definition}[Macroplace]
@@ -330,7 +347,7 @@ We can extend this definition to a subnet that is part of a bigger net too. Howe
 
 //TODO Caracterizacion de macroplace absoluta
 
-\subsection{Macrotransition}
+\subsubsection{Macrotransition}
 \begin{definition}[Macrotransition]
 A macrotransition is a subnet that meets with the following:
 \begin{enumerate}
@@ -380,7 +397,7 @@ ejemplos de macrolugar y macrotransicion}
 \label{fig:macrolugar_y_macrotransicion}
 \end{figure}
 
-\subsection{Sinkhole subnet}
+\subsubsection{Sinkhole subnet}
 
 Another thing that can happen is that the hidden subnet reach only arcs. We then find that you can not leave the subnet. We speak then of a sinkhole
 subnet.
@@ -438,7 +455,7 @@ p_5&  0 &  0  &  \vline & 0 &  1 \\
 \end{figure}
 
 
-\subsection{Source subnet}
+\subsubsection{Source subnet}
 If instead of this what happens is no arc gets into the subnet, we have a source subnet. In a source subnet we can not enter.
 
 \begin{definition}[Source subnet]
@@ -483,11 +500,11 @@ It is easy to see that a subnet is source if and only if all elements of $TIM$ a
 
 
 
-\section{Matrix parts description once defined the subnets}
+\subsection{Matrix parts description once defined the subnets}
 
 As places and transitions can be reordered smoothly, we study a network N divided into 2 subnets, for simplicity and without loss of generality.
 
-For consistency with \cite{inigo} we will follow this notation:
+For consistency with \cite{HID-Inigo2011MT} we will follow this notation:
 \[
 \left(
 \begin{array}{c|c}
@@ -597,10 +614,10 @@ p_4&  0 &  1  & \vline &  0  & -1 \\
 Interpreting each of the chunks of the matrix is similar to the previous example.
 \end{example}
 
-\section{Hiding a subnet}
+\subsection{Private information. Hiding a subnet}
 
-Once you select the subnet to hide we proceed to the occultation
-as such \cite{inigo}. Graphically, it seems simple. Just replace the subnet to hide by a black box and modify some arcs according to the following
+Once you select the private subnet we proceed to the occultation
+as such \cite{HID-Inigo2011MT}. Graphically, it seems simple. Just replace the subnet to hide by a black box and modify some arcs according to the following
 rules:
 
 \begin{enumerate}
@@ -681,7 +698,7 @@ We consider the Petri net defined by the following incidence matrix, separated i
 1 & -1 & 0 & 1 & 0 & 0\\
 \hline
 0 & 1 & 0 & 0 & 0 & 0\\
-0 & 0 & -1 & 0 & 0 & 0\\
+1 & 0 & -1 & 0 & 0 & 0\\
 0 & 0 & 0 & -1 & -1 & 1\\
 0 & 0 & 0 & 0 & 1 & -1\\
 \end{array}
@@ -695,7 +712,7 @@ After applying the above steps for the group, we would have the following:
 \rule{0.15in}{0.15in} & (1,-1,1) & 0 & 1\\
 \hline
 1  & 0 & 0 & 0\\
--1 & 0 & 0 & 0\\
+(1,-1) & 0 & 0 & 0\\
 0 &  -1 & -1 & 1\\
 0 &  0 & 1 & -1\\
 \end{array}
@@ -705,42 +722,10 @@ After applying the above steps for the group, we would have the following:
 Here we see that the information about the number of hidden places and transitions is minimized. So we know that at least there is a hidden transition and at least three hidden places (there is a transition of dimension 3). However, we do not know the exact number of either.
 \end{example}
 
-//TODO estudiar mas en profundidad esta matriz. Propiedades
+//TODO estudiar mas en profundidad esta matriz. Puede haber bastante a anadir
+en cuestion de interfaz. La fila y columna ocultas indican puertas de entrada/salida a la subred.  
 
-\section{Hiding vs. Reduction}
-
-Both Silva works \cite{silva} \cite{silva2} as in the article by Xia \cite{xia} discusses possible Petri nets reductions for grouping and simplifying, under certain circumstances, places and / or transitions. These reductions can be structural (only dependent on the structure and initial marking of the net) or depending on the interpretation of the Petri net.
-
-Should be clear that these reductions are not the same thing we are describing. We do not try to simplify the network together elements to have more or fewer places or transitions or to make it easier. What we want is to hide part of the network, regardless of how simple or complicated it is.
-
-Here we have an example of what a reduction is.
-
-\begin{example}[Reduction of an implicit place \cite{silva}]
-\label{ej:ocultacion_reduccion}
-In a marked Petri net, an implicit place is one that meets the following:
-\begin{shortenumerate}
- \item its marking can be calculated from other points marking
- \item never is the only place that prevents the enabling of its output transitions
-\end{shortenumerate}
-If we consider the following Petri net
-\[
-\includegraphics[width=0.5\textwidth]{Figures/OcultacionVsReduccion_1.eps}
-\]
-we can notice that $p_2$ is an implicit place because its marking can be
-calculated as a function of $p_3$ y $p_4$:
-\[
-M(p_2) = M(p_3) + M(p_4)
-\]
-Moreover, by this same formula, it is clear that $ M (p_2) \geq M (P_4) $ (marking cannot be negative) so the only place that can prevent enabling of $ T_3 $ is $ P_4 $. Thus eliminating $ p_2$ does not alter the behavior of the network, which would be as follows:
-\[
-\includegraphics[width=0.5\textwidth]{Figures/OcultacionVsReduccion_2.eps}
-\]
-In this network elements have been removed, no hidden. This example helps us to see the difference between hiding and a reduction.
-\end{example}  
-
-
-
-\section{Front-end interaction with the subnet. Input and output functions}
+\subsection{Front-end interaction with the subnet. Input and output functions}
 
 Once you have defined all this environment, we will try to go a little further. Let's assume that we want to export a subnet we have hidden in another network, like a black box. Our intention is to connect this hidden network to another network, and can thus be reused subnets. For example, let's assume that we have a process modeling with Petri net modeling and in this there is a subnet we want to hide, but, at the same time, we want to reuse it in other Petri nets.
 
@@ -748,7 +733,7 @@ In this case we have a problem, and once hidden network disappears half the info
 
 We will try to solve this problem. This way we can reuse hidden networks like plug-in modules on other networks. However, we will not need the actual implementation of the source or destination nodes of the arcs that leave or enter the network, respectively. The solution is to define a facade or front-end input and output of the network. This front-end will contain the information needed to interact with the network hidden, but hide the specifics of implementation. To define this behavior going from some assumptions.
 
-\subsection{Previous definitions}
+\subsubsection{Previous definitions}
 
 Let $R=\langle P,T,\alpha,\beta\rangle$ be a Petri net and let $P=\{R_1,
 R_2\}$ be a partition of $R$. 
@@ -842,7 +827,7 @@ p_7&  0 &  -1  &  \vline & 0  &  0 & 0  &  1 \\
 
 As we have generic definitions, no problem in applying to a network divided into $ H $, $ V $, $ HN $ and $ HT $, as the set $ \{H, V \} $ is a partition of $ R $.
 
-\subsection{Subnet Front-end}
+\subsubsection{Subnet Front-end}
 
 Once all these concepts, we create the front-end input/output of a Petri subnet. A front-end of the Petri net will be a intermediate facade that allows us to physically divide that subnet from the rest of the net. Thus, in order to enter or leave the subnet, you need to make it through this front-end.
 
@@ -914,7 +899,7 @@ Taking the net of the example \ref{ej:puertas_entrada_salida} and applying these
  \label{fig:front-end} 
 \end{figure}
 
-\subsection{Input/output functions}
+\subsubsection{Input/output functions}
 
 Once all these input and output concepts defined, we will introduce a few key concepts for our purpose.
 
@@ -962,12 +947,14 @@ $
 \end{itemize}
 \end{example}
 
-\subsection{Attachable net}
+//TODO peso de los arcos y colores
+
+\subsubsection{Attachable net}
 
 By joining the subnet $ R_1 $ along with its front-end and its input and output functions $ f_i $ and $ f_o $ we grouped both the internal network with external communication. This way we can '' extract'' a subnet and ''implant'' it in another net. You only need this destination network is to communicate with the front-end. So naturally appears the following definition.
 
 \begin{definition}[Attachable Petri net]
-An [Attachable Petri net is a quadruple $R_a=\langle R,F,f_i,f_o\rangle$
+An Attachable Petri net is a quadruple $R_a=\langle R,F,f_i,f_o\rangle$
 \end{definition}
 
 From these definitions, it is clear that you can create attachable subnets taking a subnet of another given and applying the whole process we have defined. But it is also possible to create from scratch, starting from a network, defining a front end for that network and declaring the input and output functions. So you can create Petri nets modules providing functionality and out through a front-end without requiring the actual implementation.
@@ -1016,5 +1003,42 @@ In this case, the behavior of the net will be the same, but does not have to be.
 one.
 \end{example}
 
+\section{Hiding vs. Reduction}
 
+Both Silva works \cite{G-Silva1985,SM-Silva19931} as in the article by Xia \cite{R-Xia20111662} discusses possible Petri nets reductions for grouping and simplifying, under certain circumstances, places and / or transitions. These reductions can be structural (only dependent on the structure and initial marking of the net) or depending on the interpretation of the Petri net.
 
+Should be clear that these reductions are not the same thing we are describing. We do not try to simplify the network together elements to have more or fewer places or transitions or to make it easier. What we want is to hide part of the network, regardless of how simple or complicated it is.
+
+Here we have an example of what a reduction is.
+
+\begin{example}[Reduction of an implicit place \cite{G-Silva1985}]
+\label{ej:ocultacion_reduccion}
+In a marked Petri net, an implicit place is one that meets the following:
+\begin{shortenumerate}
+ \item its marking can be calculated from other points marking
+ \item never is the only place that prevents the enabling of its output transitions
+\end{shortenumerate}
+If we consider the following Petri net
+\[
+\includegraphics[width=0.5\textwidth]{Figures/OcultacionVsReduccion_1.eps}
+\]
+we can notice that $p_2$ is an implicit place because its marking can be
+calculated as a function of $p_3$ y $p_4$:
+\[
+M(p_2) = M(p_3) + M(p_4)
+\]
+Moreover, by this same formula, it is clear that $ M (p_2) \geq M (P_4) $ (marking cannot be negative) so the only place that can prevent enabling of $ T_3 $ is $ P_4 $. Thus eliminating $ p_2$ does not alter the behavior of the network, which would be as follows:
+\[
+\includegraphics[width=0.5\textwidth]{Figures/OcultacionVsReduccion_2.eps}
+\]
+In this network elements have been removed, no hidden. This example helps us to see the difference between hiding and a reduction.
+\end{example}  
+
+\section{Conclusions}
+As we have seen, any Petri net can be divided into any number of subnets, only limited by the number of places and transitions. Furthermore, each one of this Petri subnets has its own input and output front-ends in order to
+connect with the rest of the Petri net.
+Of course, the main application of this definitions in this thesis
+is that the private information of this Petri net is stored in one or more
+of these defined subnets.
+
+ So I have reached the first milestone: Extend Petri Nets definition in order to define the public and the private information.  

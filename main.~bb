@@ -1,0 +1,59 @@
+\begin{thebibliography}{10}
+
+\bibitem{david}
+{\sc David, R., and Alla, H.}
+\newblock {\em Discrete, Continuous and Hybrid Petri Nets}, $1^{st}$ ed.,
+  2004~ed.
+\newblock Springer, Berlin, Germany, 2010.
+
+\bibitem{guasch}
+{\sc Guasch, T., Piera, M.~A., Casanovas, J., and Figueras, J.}
+\newblock {\em Modelado y Simulaci\'on. Aplicaci\'on a procesos log\'isticos de
+  fabricaci\'on y servicios}.
+\newblock Edicions UPC, Barcelona, Spain, 2002.
+
+\bibitem{jensen}
+{\sc Jensen, K., and Kristensen, L.}
+\newblock {\em Coloured Petri Nets. Modelling and Validation of Concurrent
+  Systems}.
+\newblock Springer, Berlin, Germany, 2009.
+
+\bibitem{jimenez}
+{\sc Jim\'enez~Mac\'ias, E., and P\'erez de~la Parte, M.}
+\newblock Simulation and optimization of logistic and production systems using
+  discrete and continuous petri nets.
+\newblock {\em Simulation 80}, 3 (2004), 143--152.
+
+\bibitem{inigo}
+{\sc Le\'on~Samaniego, I.}
+\newblock Seguridad y protecci\'on en env\'io y almacenamiento de datos.
+  firmado y cifrado. aplicaci\'on a redes de petri y gesti\'on de residuos con
+  e3l.
+\newblock Master's thesis, Universidad de La Rioja. Logro\~no, Spain, 2011.
+
+\bibitem{murata}
+{\sc Murata, T.}
+\newblock Petri nets: Properties, analysis and applications.
+\newblock {\em Procs. of the IEEE 77}, 4 (1989), 541--580.
+
+\bibitem{peterson1981}
+{\sc Peterson, J.}
+\newblock {\em Petri Net Theory and the Modeling of Systems}.
+\newblock Prentice Hall, Englewood Clifs, NJ, 1981.
+
+\bibitem{silva}
+{\sc Silva, M.}
+\newblock {\em Las Redes de Petri: en la Autom\'atica y en la Inform\'atica}.
+\newblock Ed. AC, Madrid, Spain, 1985.
+
+\bibitem{silva2}
+{\sc Silva, M.}
+\newblock {\em In Practice of Petri Nets in Manufacturing}.
+\newblock Chapman and Hall, London, UK, 1993.
+
+\bibitem{xia}
+{\sc Xia, C.}
+\newblock Analysis and application of petri subnet reduction.
+\newblock {\em Procs. of the IEEE 6}, 8 (2011), 1662--1669.
+
+\end{thebibliography}
