@@ -2,37 +2,41 @@
 
 \chapter{Literature review} % Main chapter title
 
-\label{LiteratureReview} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+\label{Chapter:LiteratureReview} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
 \lhead{Chapter 2. \emph{Literature review}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
 //BORRAR
 
 \begin{itemize}
- \item G - Petri nets general
- \item SM - Simulacion de modelos
- \item EPN - Extensiones de Petri nets originales
- \item R - Reduccion de redes
- \item SN - Subredes
- \item REP - Representation
- \item PROP - Propiedades de PN
- \item HID - Ocultacion de partes
- \item PNML - PNML
- \item PNMLE - Extensiones PNML
-
+ \item \textbf{G - Petri nets general - COMPLETO}
+ \item \textbf{SM - Simulacion de modelos
+- COMPLETO} \item \textbf{EPN - Extensiones de Petri nets originales
+} \item \textbf{R - Reduccion de redes
+- COMPLETO} \item \textbf{SN - Subredes
+- COMPLETO }\item \textbf{REP - Representation - COMPLETO}
+ \item \textbf{PROP - Propiedades de PN - COMPLETO}
+ \item \textbf{HID - Ocultacion de partes
+- COMPLETO} \item \textbf{PNML - PNML
+- COMPLETO }\item \textbf{PNMLE - Extensiones PNML
+- COMPLETO}
 \end{itemize}
 
+
+PREGUNTAR POR \cite{EPN-Campos1992352}
+\cite{EPN-SM-Latorre2010152}
 //
 
 In this chapter I am going to go over the ancient Petri net history. 
 This work is a very basic investigation 
-on Petri nets. This means that the most of the references are very general.
+on Petri nets. This means that the most of the references are quite general.
 
 For this literature review, I will follow the structure of this thesis:
 
 \begin{enumerate}
 \item First of all, I am going to describe some generalities of Petri nets
-as an introduction\item Then I will describe subnets and the process of splitting Petri nets
+as an introduction
+\item Then I will describe subnets and the process of splitting Petri nets
 into several subnets. Some of those subnets are going to be hidden 
 \item The next step is to explain some possible Petri net representations
 and my selection of PNML for the hiding process
@@ -44,20 +48,21 @@ subnets defined before
 \section{Introduction. Petri nets}
 
 In the 60's, Carl Adam Petri invented a new way to describe distributed systems
-called Petri nets \cite{G-Petri1962PhD,G-Petri1966,G-Petri1976}. Many net
+called Petri nets \citep{G-Petri1962PhD,G-Petri1966,G-Petri1976}. Many net
 theories
 are based on those works\cite{G-Petri2007}. Nowadays,
-Petri nets are really extended to represent discrete systems \cite{SM-Holloway1997151,EPN-SM-Latorre2010152,EPN-SM-Latorre2010247,EPN-SM-Silva2011427}. There are lots of applications
+Petri nets are really extended to represent discrete systems \cite{G-EPN-Jimenez20044897,SM-Holloway1997151,EPN-SM-Latorre2010152,EPN-SM-Latorre2010247,EPN-SM-Silva2011427}. There are lots of applications
 of Petri nets:
 
 \begin{itemize}
 \item Modelling of sequential processes\cite{SM-Recalde1998267}, concurrent
-systems\cite{EPN-SM-Jensen2007213,EPN-SM-Kristensen200819}, manufacturing \cite{G-Silva1989374,SM-Desrochers2010,SM-Silva19931,SM-Silva1997182,G-Silva1989374}, logistic
-processes \cite{SM-Guasch2002},...
+systems\cite{EPN-SM-Jensen2007213,EPN-SM-Kristensen200819}, manufacturing \cite{G-Silva1989374,SM-Desrochers2010,SM-Silva19931,SM-Silva1997182,G-Silva201213}, logistic
+processes \cite{SM-Guasch2002}, discrete event systems \cite{EPN-Balbo1998}, ...
 \item Simulation of industrial applications \cite{SM-Jimenez2006159,SM-Latorre2013346}, logistic and production systems \cite{SM-Jimenez2004143},...
 \end{itemize} 
 
 //TODO Incluir mas aplicaciones de las redes de Petri
+
 
 This work is not about of Petri net application, so I am not
 going to deepen this field. 
@@ -70,18 +75,172 @@ many authors investigated about them. The basic basis of my work are some of the
 \item Peterson, JL \cite{G-EPN-Peterson1981}
 \end{itemize} 
 
+
+
 And not only general Petri nets. Any kind of extensions are well received
 \begin{itemize}
-\item Jensen, K \cite{EPN-SM-Jensen2007213,G-EPN-Jensen1985723}
-\item ...
-
+\item Lien \cite{EPN-Lien1976251}: Generalized Petri nets
+\item Jensen, K \cite{G-EPN-Jensen1985723,EPN-SM-Jensen2007213,EPN-Jensen20091}: High level
+Petri nets, coloured Petri nets
+\item Silva \cite{EPN-PROP-Silva2002314,EPN-SM-Silva2011427}: Continuous Petri nets 
+\item Khomenko, V \cite{G-SM-Khomenko2003458}: High level Petri nets
+\item Ratzer \cite{EPN-PROP-Ratzer2003450}: Coloured Petri nets
+\item Kristensen \cite{EPN-Kristensen2004626,EPN-SM-Kristensen200819}: Coloured Petri nets
+\item Silva \cite{EPN-Silva2004253}: Fluid of Petri nets
+\item Latorre \cite{EPN-SM-Latorre2010152,EPN-SM-Latorre2010247}: Aggregation Petri nets and coloured Petri nets
+\item Recalde \cite{EPN-Recalde2010235}: Continuous Petri nets
+\item David \cite{EPN-David2010}: Discrete, continuous and hybrid Petri nets
+\item Fraca \cite{EPN-Fraca201221}: Fluid and untimed Petri nets
+\item Vazquez \cite{EPN-Vazquez2012641,EPN-Vazquez2013365}: Stochastic continuous
+Petri nets and fluid Petri nets
 \end{itemize}
 
-\section{Subnets}
-\section{Petri nets representation. PNML}
-\section{PNML extension for hiding support}
-\section{Hide information on Petri nets. XMLEncryption}
+The study of
+subnetting and hiding of all of them are outside the scope of this work,
+but as all of these Petri nets extensions are reproducible by a graph, they are
+susceptible of applying the same described methods with light variations
+(like color, arc types, ...). 
 
+ 
+Several authors studied properties of Petri nets and they have been very
+useful as \cite{PROP-Murata1977412,PROP-Engelfriet1991575,PROP-Silva1992447,PROP-Recalde1998223,PROP-Zeng20021308}.
+But they don't contribute in the main goal of my work. They are general references
+for the theoretical development. 
+ 
+Other fonts are authors that studied general theory on structure of systems, as Teruel \cite{G-Teruel1996271} is. 
+
+But this work is not oriented towards studying all of these Petri net type.
+I want my work so general that it is easily exported to practically any kind
+of existing Petri nets or future Petri nets types that are not defined still.
+
+\section{Subnets}
+
+The study of subnets is very ancient with general works by Silva \cite{G-Silva1985,G-Silva201213},
+Murata \cite{G-Murata1977412,G-Murata1989541}, Peterson \cite{G-EPN-Peterson1981}. All of them have been very useful for my preparation and they are the theoretical basics of my work. But there are other more specific works that study several aspects of subnets.
+
+The first approach was presented by Valette \cite{SN-Valette197935}, who
+studied the possibility and properties of replacing of places or transitions by subnets.
+Suzuki (in collaboration with Murata) \cite{SN-Suzuki198351} continued it
+with a method
+for expanding and reducing Petri nets. Basically, they wanted to substitute
+places and transitions by subnet and viceversa, maintaining the properties
+of the net. Druzhinin (and Yuditskii) \cite{SN-DRUZHININVA19921922} completed
+these works explaining how to construct regular Petri nets from standard subnets.
+But basically is an algorithm to replace places or transitions with well-formed
+Petri nets. My contribution in this field is the description of a way to replace subnets (not only places or transitions) with other subnets. Their work can be seen as a particular
+case of my description of macroplace an macrotrasition. However I don't deepen the properties because it is not my goal.
+
+Other works important in this section are Fahmy's ones \cite{SN-Fahmy1990321,SN-Fahmy1993127}.
+At first sight (only reading the title), it seems to be the same I explain in the chapter \ref{Chapter:Private_information_inPetri_nets.Subnets}. But
+this is not true. These two articles by Famhy are about the analysis of large Petri nets by cutting them into pieces. The second one \cite{SN-Fahmy1993127} is and extension of the first one \cite{SN-Fahmy1990321}. The idea is "divide
+and conquer" over the net. The partitioning of a net is useful because it preserves the properties of the original whole net. He centers the interest
+on the characteristics of the net and the partitions. But he doesn't make an extensive study of subnets, that is what I do in my work. Basically, it is something like the previous paragraph: it can be seen as a particular case of my study. 
+
+The last entrance in this section is the work of Xia \cite{R-Xia20111662}. His objective is to encapsulate a subnet
+in one place or transition. Then he study several ways of simplify that subnet
+or erasing
+redundant information. These subnets are grouped into a single point of execution. I want to go further by defining hidden (not grouped) parts of the net. However, this work  has much to do with macroplaces and macrotransitions  introduced in chapter \ref{Chapter:Private_information_inPetri_nets.Subnets}.
+
+Other work of interest is Hsieh' one \cite{G-PROP-Hsieh2011496}, where he
+analyzes non-ordinary Petri nets for flexible assembly/disassembly processes
+based on structural decomposition, but it is not a net decomposition but a process decomposition. So it has no more interest for my work. 
+
+\section{Petri nets representation}
+
+Other important question in this thesis is the election of a Petri net representation
+that allows us to translate defined subnets into that format in order to
+apply posterior operations over those subnets.
+
+Apart from the general works of Petri nets named before
+introduced by Petri, Murata, Peterson and Silva \citep{G-Petri1962PhD,G-Petri1966,G-Petri1976,G-Murata1977412,G-SM-Murata19772,G-EPN-Peterson1981,G-Silva1985,G-Murata1989541,G-Silva1993,G-Silva201213},
+there are other specific articles in this field:
+\begin{itemize}
+\item Hura \cite{REP-Hura1984865} introduced the state space representation of Petri nets, but with no possibility of subnet representation
+\item Anishimov and Perchuk \cite{REP-Anisimov198690} in their work "Representation
+of exchange protocols and Petri using finite sequential machine nets"didn't do exactly what the title says. They used High level Petri nets in order to define interaction protocols between two objects. These protocols are seen as more precise formal languages. Definitely, nothing seemed to my goal.   
+\item Das \cite{REP-Das1987643} defined the
+reflexive incidence matrix (RIM) representation of Petri nets, The possibilities
+of represent subnets in this case is basically the same as 
+normal incidence matrices. So my method can be applied in the same way with
+this representation.
+\item Malyugin \cite{REP-Malyugin1987696} worked in an arithmetical representation
+of Petri nets, but, as I said with Hura, there is no easy implementation
+of subnet representation.
+So this representation is not useful for my work.
+\item Kaushal \cite{REP-Kaushal19921083} introduced a new formulation for
+state equation representation for Petri nets. The problem is the same as
+with Hura and Malyugin: no subnet representation.
+\item Kiritsis and Xirouchakis \cite{REP-Kiritisis2001173} defined a new
+matrix implementation of Petri nets for process planning. As it is matrix representation my method can be applied in the same way, as I said with Das.  \end{itemize}
+ 
+
+\section{PNML}
+PNML is a standard for representation of Petri nets. Because of that, the
+main source of information is internet. In particular the official site \url{www.pnml.org}
+\cite{PNML-pnml.org} has all the necessary information to work with it.
+
+
+After several years of study, in 2004 the ISO/IEC 15909-1  \cite{PNML-iso/iec-15909-1} appeared to define conceptually and mathematically a xml representation
+of Petri nets: PNML \cite{PNML-Hillah2006307}.  It is explained in a less formal way by Billington \cite{PNML-Billington2003483}. 
+
+
+So all the Petri nets that I am able to draw can be stored in PNML. Because
+of that, it is one of the most supported formats in almost every program that
+draw Petri nets. 
+
+PNML \cite{PNML-pnml.org} is an implementation defined by the standard ISO/IEC 15909-2:2014 \cite{PNML-iso/iec-15909-2:2011} that complement the anterior
+ISO/IEC 15909-1. The goal of this standard ISO is to define a transfer format of Place/Transition nets, High-level Petri nets and Symmetric nets. However, it is designed in
+such way that it can be easily extended, so that other versions of Petri
+nets can be supported later.
+
+ 
+
+
+\section{PNML extensions}
+
+There are ways to define these extensions in a graphical way, using eclipse
+as intermediate named ePNK, explained by Kindler \cite{PNMLE-Kindler2011318} and Hillah
+\cite{PNMLE-Hillah201246}. Additionally, Moutinho \cite{PNMLE-Moutinho20102156} and Ribeiro \cite{PNMLE-Ribeiro2011777} defined several PNML extensions for several kinds of Petri nets.
+
+But this is not the main goal of my work. My intention is to describe the subnet extension in a theoretical way. Once described, it could be implemented with that kind of tools.
+
+
+
+\section{Hide information on Petri nets}
+
+There is very little literature about this topic (except my own work \cite{HID-Inigo2011MT}).
+There are a couple of articles that seems to threat the theme, but with a deeper study we can see that the achievements are not what I am looking for.
+
+Mahulea \cite{HID-Mahulea2013387} point the problem of observability of timed CPNs, but not with the same meaning of my vision. His problem is that
+in determined circumstances  it is difficult to estimate the initial/ actual state/marking
+of a Petri net. Anything like my work. 
+
+\textbf{//COMPLETAR ESTE} By his side, Saabori \cite{HID-Saboori20106759} raise the possibility of
+
+Other work that at first sight may be interesting is one article from Velilla
+\cite{SM-Velilla198875} that define a mechanism for safe implementation of
+concurrent systems. But this safety is for the process itself, not for the
+safety of the implementation. So it doesn't contribute to my work. 
+ 
+My intention is to hide part of a Petri net. The way to achieve this goal
+is cutting the net in subnets, represent them in PNML and hide it. But there is not literature about the PNML representation for subnets, so this
+is new knowledge.
+
+
+
+
+
+\section{XMLEncryption}
+
+XMLEncryption is an W3C recommendation. In particular, it is a way to cipher XML content. And not only that. Actually, it is a way to cipher any kind
+of information and store this ciphered content in xml format. There are thousands
+of articles and applications of it, but, as it is a W3C recommendation, it
+is completely defined, and the last version of this definition is \cite{XMLENC-w3.org/xmlenc-core1}, In this work, I apply this method in order to achieve the goal of hide part
+of a petri net. My contribution to knowledge in this case is to mix two different
+knowledge areas as Petri nets
+and encryption are.
+
+So there are no literature about this topic, because nobody has developed it until I do.   
 
 
 

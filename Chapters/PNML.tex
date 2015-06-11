@@ -190,28 +190,26 @@ I have tried to think about these ways of representation but, in my opinion, no 
 %----------------------------------------------------------------------------------------
 \section{PNML. Petri Net Marked Language}
 
+As I have explain in the Literature review in the chapter \ref{Chapter:LiteratureReview},
+ PNML is a way to represent Petri nets as xml content.
+
+The advantages over the other three representation ways described before
+are clear. By one side, XML is a widely extended format to represent almost
+everything. And not only that. XML is a robust technology free of errors
+and it is really flexible. Its flexibility come from you can add any kind
+of labels and functionality with a very little amount of work. Its robustness come from the strict
+specification of the schemas declared to define completely the XML files    
+that support. Once
+the schema is defined, the XML files have a no way to get out of this definition,
+so we can know if a XML file is correct given its schema. And this is not all. If you have an XML file, you can extract information to and complete it to create a schema for that file.  
+
+
+
 Originally, with basic Petri nets, the structure of a Petri net was fully provided.
 The only thing that is not supported in comparison with graphic mode is the graphical appearance of Petri nets: the position of nodes and
 transitions was not
 important, but with the arrival of High level Petri nets and Petri nets design
-software, is necessary to store this kind of information.
-
-After several years of study, in 2004 the ISO/IEC 15909-1  \cite{PNML-iso/iec-15909-1} appeared to define conceptually and mathematically a xml representation
-of Petri nets: PNML\cite{PNML-Hillah2006307}.  
-
-
-So all the Petri nets that I am able to draw can be stored in PNML. Because
-of that, it is one of the most supported formats in almost every program that
-draw Petri nets. 
-
-PNML \cite{PNML-pnml.org} is an implementation defined by the standard ISO/IEC 15909-2:2014 \cite{PNML-iso/iec-15909-2:2011}. The goal of this ISO standard is to define a transfer format of Place/Transition nets, High-level Petri nets and Symmetric nets. However, it is designed in
-such way that it can be easily extended, so that other versions of Petri
-nets can be supported later.
-There is a way to define these extensions in a graphical way, using eclipse
-as intermediate \cite{PNMLE-Kindler2011318,PNMLE-Hillah201246}, but this
-is not the main goal of my work. My intention is to describe this extension
-in a theoretical way. Once described, it could be implemented with that kind
-of tools.
+software, it is necessary to store this kind of information.
 
 In this work, I am going to study only basic Petri nets, but
 that concept and the method is easily exportable to other kind of nets, such as Symmetric nets and High Level Petri nets (that are representable in PNML
