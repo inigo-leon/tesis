@@ -39,13 +39,6 @@
 	school = {Technischen Hoschule Darmstadt},
 	year = 1962
 }
-@Article{EPN-Giua1992974,
-	author = {GIUA, A; DICESARE, F; SILVA, M},
-	title = {GENERALIZED MUTUAL EXCLUSION CONSTRAINTS ON NETS WITH UNCONTROLLABLE TRANSITIONS},
-	journal = {1992 IEEE INTERNATIONAL CONFERENCE ON SYSTEMS, MAN, AND CYBERNETICS, VOLS 1 AND 2: EMERGENT INNOVATIONS IN INFORMATION TRANSFER PROCESSING AND DECISION MAKING},
-	year = 1992,
-	pages = {974-979}
-}
 @Article{EPN-Campos1992352,
 	author = {Campos, J. and Silva, M.},
 	title = {Structural Techniques and Performance Bounds of Stochastic Petri Net Models},
@@ -211,7 +204,7 @@
 	source = {Scopus}
 }
 @Conference{REP-Zhang20111396,
-	author = {Zhang, F.a  and Ma, Z.M.a  and Ribaric, S.b },
+	author = {Zhang, F. and Ma, Z.M. and Ribaric, S.},
 	title = {Representation of Petri net with OWL DL ontology},
 	journal = {Proceedings - 2011 8th International Conference on Fuzzy Systems and Knowledge Discovery, FSKD 2011},
 	year = 2011,
@@ -333,7 +326,7 @@
 	source = {Scopus}
 }
 @Article{PROP-Zeng20021308,
-	author = {Zeng, Q.-T.a  b  and Wu, Z.-H.b },
+	author = {Zeng, Q.-T. and Wu, Z.-H.},
 	title = {Process net system of Petri net},
 	journal = {Jisuanji Xuebao/Chinese Journal of Computers},
 	year = 2002,
@@ -390,7 +383,7 @@
 	document_type = {Conference Paper}
 }
 @Conference{HID-Saboori20106759,
-	author = {Saboori, A.a  and Hadjicostis, C.N.a  b },
+	author = {Saboori, A. and Hadjicostis, C.N.},
 	title = {Opacity verification in stochastic discrete event systems},
 	journal = {Proceedings of the IEEE Conference on Decision and Control},
 	year = 2010,
@@ -405,7 +398,7 @@
 	source = {Scopus}
 }
 @Article{PNMLE-Hillah201246,
-	author = {Hillah, L.-M.a  and Kordon, F.b  and Lakos, C.c  and Petrucci, L.d },
+	author = {Hillah, L.-M. and Kordon, F. and Lakos, C. and Petrucci, L.},
 	title = {Extending PNML scope: A framework to combine petri nets types},
 	journal = {Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
 	year = 2012,
@@ -421,7 +414,7 @@
 	source = {Scopus}
 }
 @Conference{PNMLE-Ribeiro2011777,
-	author = {Ribeiro, J.a  b  and Moutinho, F.a  and Pereira, F.a  b  and Barros, J.P.c  and Gomes, L.a },
+	author = {Ribeiro, J. and Moutinho, F. and Pereira, F. and Barros, J.P. and Gomes, L.},
 	title = {An Ecore based Petri net type definition for PNML IOPT models},
 	journal = {IEEE International Conference on Industrial Informatics (INDIN)},
 	year = 2011,
@@ -452,7 +445,7 @@
 	source = {Scopus}
 }
 @Conference{PNMLE-Moutinho20102156,
-	author = {Moutinho, F.a  and Gomes, L.a  and Ramalho, F.b  and Figueiredo, J.b  and Barros, J.P.c  and Barbosa, P.b  and Pais, R.c  and Costa, A.a },
+	author = {Moutinho, F. and Gomes, L. and Ramalho, F. and Figueiredo, J. and Barros, J.P. and Barbosa, P. and Pais, R. and Costa, A.},
 	title = {Ecore representation for extending pnml for Input-Output Place-Transition nets},
 	journal = {IECON Proceedings (Industrial Electronics Conference)},
 	year = 2010,
@@ -467,7 +460,7 @@
 	source = {Scopus}
 }
 @Article{PNML-Hillah2010318,
-	author = {Hillah, L.M.a  and Kordon, F.a  and Petrucci, L.b  and Trèves, N.c },
+	author = {Hillah, L.M. and Kordon, F. and Petrucci, L. and Traves, N.},
 	title = {PNML framework: An extendable reference implementation of the petri net markup language},
 	journal = {Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
 	year = 2010,
@@ -483,7 +476,7 @@
 	source = {Scopus}
 }
 @Article{SM-Latorre2013346,
-	author = {Latorre, J.I.a  and Jim\'enez, E.b  and P\'erez, M.b },
+	author = {Latorre, J.I. and Jim\'enez, E. and P\'erez, M.},
 	title = {The optimization problem based on alternatives aggregation Petri nets as models for industrial discrete event systems},
 	journal = {Simulation},
 	year = 2013,
@@ -593,7 +586,7 @@
 	source = {Scopus}
 }
 @Conference{EPN-SM-Latorre2010247,
-	author = {Latorre, J.-I.a  and Jim\'enez, E.b  and P\'erez, M.c },
+	author = {Latorre, J.I. and Jim\'enez, E. and P\'erez, M.},
 	title = {Coloured Petri nets as a formalism to represent alternative models for a discrete event system},
 	journal = {22th European Modeling and Simulation Symposium, EMSS 2010},
 	year = 2010,
@@ -607,7 +600,7 @@
 	source = {Scopus}
 }
 @Article{EPN-SM-Latorre2010152,
-	author = {Latorre, J.I.a  and Jim\'enez, E.b  and P\'erez, M.c  and Blanco, J.c  and Mart\'inez, E.c },
+	author = {Latorre, J.I. and Jim\'enez, E. and P\'erez, M. and Blanco, J. and Mart\'inez, E.},
 	title = {The alternatives aggregation Petri nets as a formalism to design discrete event systems},
 	journal = {International Journal of Simulation and Process Modelling},
 	year = 2010,
@@ -624,7 +617,7 @@
 	source = {Scopus}
 }
 @Article{EPN-Recalde2010235,
-	author = {Recalde, L.a  and Haddad, S.b  and Silva, M.a },
+	author = {Recalde, L and Haddad, S. and Silva, M.},
 	title = {Continuous petri nets: Expressive power and decidability issues},
 	journal = {International Journal of Foundations of Computer Science},
 	year = 2010,
@@ -641,7 +634,7 @@
 	source = {Scopus}
 }
 @Book{EPN-Jensen20091,
-	author = {Jensen, K.a  and Kristensen, L.M.b },
+	author = {Jensen, K  and Kristensen, L.M},
 	title = {Coloured Petri Nets: Modelling and validation of concurrent systems},
 	journal = {Coloured Petri Nets: Modelling and Validation of Concurrent Systems},
 	year = 2009,
@@ -732,7 +725,7 @@
 	source = {Scopus}
 }
 @Conference{G-EPN-Jimenez20044897,
-	author = {Jim\'enez, E.a  and J\'ulyez, J.b  and Recalde, L.b  and Silva, M.b },
+	author = {Jim\'enez, E. and J\'ulyez, J. and Recalde, L. and Silva, M.},
 	title = {Relaxed continuous views of discrete event systems: Considerations on forrester diagrams and Petri nets},
 	journal = {Conference Proceedings - IEEE International Conference on Systems, Man and Cybernetics},
 	year = 2004,
@@ -859,7 +852,7 @@
 	source = {Scopus}
 }
 @Article{PROP-Silva1992447,
-	author = {Silva, M.a  and Murata, T.b },
+	author = {Silva, M. and Murata, T.},
 	title = {B-fairness and structural B-fairness in Petri net models of concurrent systems},
 	journal = {Journal of Computer and System Sciences},
 	year = 1992,
@@ -934,7 +927,7 @@
 	source = {Scopus}
 }
 @Article{SM-Holloway1997151,
-	author = {Holloway, L.E.a  and Krogh, B.H.b  and Giua, A.c },
+	author = {Holloway, L.E. and Krogh, B.H. and Giua, A.},
 	title = {A Survey of Petri Net Methods for Controlled Discrete Event Systems},
 	journal = {Discrete Event Dynamic Systems: Theory and Applications},
 	year = 1997,
@@ -950,7 +943,7 @@
 	source = {Scopus}
 }
 @Article{PNML-Billington2003483,
-	author = {Billington, J.a  and Christensen, S.b  and Van Hee, K.c  and Kindler, E.d  and Kummer, O.e  and Petrucci, L.f  and Post, R.c  and Stehno, C.g  and Weber, M.h },
+	author = {Billington, J. and Christensen, S. and Van Hee, K. and Kindler, E. and Kummer, O. and Petrucci, L. and Post, R. and Stehno, C. and Weber, M.},
 	title = {The Petri net markup language: Concepts, technology, and tools},
 	journal = {Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
 	year = 2003,
@@ -965,7 +958,7 @@
 }
 @InProceedings{PNML-Hillah2006307,
 	crossref = {DBLP:conf/forte/2006},
-	author = {Lom Hillah and                Fabrice Kordon and                Laure Petrucci{-}Dauchy and                Nicolas Tr{\`{e}}ves},
+	author = {Lom Hillah and Fabrice Kordon and Laure Petrucci{-}Dauchy and Nicolas Tr{\`{e}}ves},
 	title = {{PN} Standardisation: {A} Survey},
 	booktitle = {Formal Techniques for Networked and Distributed Systems - {FORTE}                2006, 26th {IFIP} {WG} 6.1 International Conference, Paris, France,                September 26-29, 2006.},
 	pages = {307--322},
@@ -999,6 +992,30 @@
 	year = 2011,
 	note = {[Online; accessed 21-May-2015]},
 	url = {http://www.iso.org/iso/catalogue_detail.htm?csnumber=43538}
+}
+@Misc{PNML-relaxng.org,
+	title = {RELAX NG home page},
+	year = 2014,
+	note = {[Online; accessed 15-Jun-2015]},
+	url = {http://relaxng.org/}
+}
+@Misc{PNML-dtd,
+	title = {Extensible Markup Language (XML) 1.1},
+	year = 2004,
+	note = {[Online; accessed 15-Jun-2015]},
+	url = {http://www.w3.org/TR/2004/REC-xml11-20040204/#dtd}
+}
+@Misc{PNML-xsd1,
+	title = {XML Schema Part 1: Structures Second Edition},
+	year = 2004,
+	note = {[Online; accessed 15-Jun-2015]},
+	url = {http://www.w3.org/TR/xmlschema-1/}
+}
+@Misc{PNML-xsd2,
+	title = {XML Schema Part 2: Datatypes Second Edition},
+	year = 2004,
+	note = {[Online; accessed 15-Jun-2015]},
+	url = {http://www.w3.org/TR/xmlschema-1/}
 }
 @Article{SN-Suzuki198351,
 	author = {Suzuki, I  and Murata, T},
