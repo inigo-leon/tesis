@@ -291,9 +291,9 @@ I fought to combine my job, my family and studies. I has been a difficult work, 
 \input{Chapters/PrivateInformation} 
 \input{Chapters/PNML}
 \input{Chapters/XMLEncryption} 
-%\input{Chapters/Chapter6} 
+\input{Chapters/XMLSignature} 
 %\input{Chapters/Chapter7} 
-\input{Chapters/Conclusions} 
+%\input{Chapters/Conclusions} 
 \input{Chapters/ejemplosLatex} 
 
 %----------------------------------------------------------------------------------------

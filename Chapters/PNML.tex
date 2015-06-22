@@ -2,9 +2,9 @@
 
 \chapter{Petri net representation for subnets and hiding support. PNML} % Main chapter title
 
-\label{Petri net representation for subnets and hiding support. PNML} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{Chapter3}
+\label{Chapter: Petri net representation for subnets and hiding support. PNML} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{Chapter3}
 
-\lhead{Chapter . \emph{Petri net representation for subnets and hiding support. PNML}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+\lhead{Chapter 4. \emph{Petri net representation for subnets and hiding support. PNML}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
 %----------------------------------------------------------------------------------------
 %       SECTION 1
@@ -67,7 +67,7 @@ if necessary.
 \subsection{Matrix representation}
 This representation is very useful to study properties and evolution of a
 Petri net, independently of its graphic representation.
-As we have seen before (in chapter \ref{Chapter3}), we can reorder rows and columns and define subnets
+As we have seen before (in chapter \ref{Chapter: Private_information_inPetri_nets.Subnets}), we can reorder rows and columns and define subnets
 in the matrix.
 \begin{example}[Matrix representation of a hidden subnet]
 \label{ej:matrix_representation_hidden_subnet}
@@ -97,7 +97,7 @@ p_5&  0 &  0  & \vline &  0  &  1 \\
 }
 \]
 
-or this other one, grouping the places and transitions of the hidden subnet as seen in chapter \ref{Chapter3}
+or this other one, grouping the places and transitions of the hidden subnet as seen in chapter \ref{Chapter: Private_information_inPetri_nets.Subnets}
 \[
 \kbordermatrix{
    &  _ & \vline &t_3 & t_4\\
@@ -190,7 +190,7 @@ I have tried to think about these ways of representation but, in my opinion, no 
 %----------------------------------------------------------------------------------------
 \section{PNML. Petri Net Marked Language}
 
-As I have explain in the Literature review in the chapter \ref{Chapter:LiteratureReview},
+As I have explain in the Literature review in the chapter \ref{Chapter: LiteratureReview},
  PNML is a way to represent Petri nets as xml content.
 
 The advantages over the other three representation ways described before
@@ -248,7 +248,7 @@ be used as "subnets". So I am going to extend the language in order to get sever
 \begin{enumerate}
 \item Represent subnets of a Petri Net.
 \item Include input and output interfaces for every subnet.
-\end{itemize}
+\end{enumerate}
 
 As we can think, definition of several subnets of a Petri net is possible
 and the connection over them are always through their respective interfaces.
@@ -630,7 +630,7 @@ and we have this other PNML extended code:
 \end{lstlisting}
 
 Now this is one of the most important moment in this work: I will separate the inside
-and the outside of the subnet completely. Taking advantage of the process described in chapter \ref{Chapter:Private_information_inPetri_nets.Subnets}, I have to extract the front-end from this subnet.
+and the outside of the subnet completely. Taking advantage of the process described in chapter \ref{Chapter: Private_information_inPetri_nets.Subnets}, I have to extract the front-end from this subnet.
 
 In this case I have two igp (input gate to a place) and an ogt (output gate to a transition) with weight 2. The figure \ref{fig:PNML_InterfazSubredEjemplo1} illustrates the interface associated:
 

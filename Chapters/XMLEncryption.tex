@@ -2,9 +2,9 @@
 
 \chapter{XMLEncryption} % Main chapter title
 
-\label{ChapterX} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+\label{Chapter: XMLEncryption} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-\lhead{Chapter X. \emph{Chapter Title Here}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+\lhead{Chapter 5. \emph{XMLEncryption}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
 %----------------------------------------------------------------------------------------
 %       SECTION 1
@@ -98,9 +98,10 @@ without ciphering information]
 </PaymentInfo>
 \end{lstlisting}
 
-As we can see, the credit card number has been replaced by a new tag \texttt{\textless EncryptedData\textgreater} that contains the ciphered credit card number.
+As we can see, the credit card number has been replaced by a new 
+tag \texttt{\textless EncryptedData\textgreater} that contains the ciphered credit card number.
 
-\note{A new namespace appear named \texttt{xenc} that is the standard namespace
+\note{A new namespace \texttt{xenc} appear  that is the standard namespace
 for XMLEncryption. However, in futher examples this namespace can be delete
 for clarity and for space problems without loss of generality.}
 
@@ -168,10 +169,10 @@ This is a little approach to XMLEncryption functionality, but enough for
 understanding the next section.
 
 
-\section{XMLEncryption with PNML subnets}
+\section{XMLEncryption and Petri nets}
 
 Once described XMLEncryption it is time to apply it in order to hide part
-of a Patri net. Remembering the chapter \ref{Petri net representation for subnets and hiding support. PNML}, we have one Petri net with or more subnets represented in a PNML file. These subnets are represented by a \texttt{\textless subnet\textgreater}\ tag that contains \texttt{\textless interface\textgreater}\ and
+of a Petri net. Remembering the chapter \ref{Chapter: Petri net representation for subnets and hiding support. PNML}, we have one Petri net with or more subnets represented in a PNML file. These subnets are represented by a \texttt{\textless subnet\textgreater}\ tag that contains \texttt{\textless interface\textgreater}\ and
 \texttt{\textless content\textgreater}. This last tag the
 xml content that is going to be ciphered. Obviously, if we encrypt the interface
 we will have no way to connect the subnet with the rest of the net.
@@ -291,13 +292,13 @@ So it is as follows in the figure:
 \]
 \rule{35em}{0.5pt}
  \caption{Petri net with hidden subnet}
- \label{fig:PNML_SubredEjemplo1} 
+ \label{fig:XMLENC_SubredEjemplo1} 
 \end{figure}
 
  
 \section{Examples}
 
-\subsection{Several hidden subnets}
+\subsection{Hidding several subnets}\label{Example several subnets}
 
 One important thing is that I can cipher several subnets of the same Petri
 net with distinct options. For example, if there are two subnets for both

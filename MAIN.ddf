@@ -1,9 +1,10 @@
 [Settings]
 ViewOrientation=Portrait
 [tex-AutoSave]
-D:\Dropbox\Doctorado\latex\tesis\main.tex=D:\Dropbox\Doctorado\latex\tesis\main.tex-AutoSave
-D:\Dropbox\Doctorado\latex\tesis\Chapters\PNML.tex=D:\Dropbox\Doctorado\latex\tesis\Chapters\PNML.tex-AutoSave
 D:\Dropbox\Doctorado\latex\tesis\Chapters\XMLEncryption.tex=D:\Dropbox\Doctorado\latex\tesis\Chapters\XMLEncryption.tex-AutoSave
-D:\Dropbox\Doctorado\latex\tesis\Chapters\Introduction.tex=D:\Dropbox\Doctorado\latex\tesis\Chapters\Introduction.tex-AutoSave
+D:\Dropbox\Doctorado\latex\tesis\Chapters\XMLSignature.tex=D:\Dropbox\Doctorado\latex\tesis\Chapters\XMLSignature.tex-AutoSave
+D:\Dropbox\Doctorado\latex\tesis\main.tex=D:\Dropbox\Doctorado\latex\tesis\main.tex-AutoSave
+C:\BAKOMA.TEX\LOCAL\DICT\USERDICT.TXT=C:\BAKOMA.TEX\LOCAL\DICT\USERDICT.TXT-AutoSave
 D:\Dropbox\Doctorado\latex\tesis\Chapters\PrivateInformation.tex=D:\Dropbox\Doctorado\latex\tesis\Chapters\PrivateInformation.tex-AutoSave
 D:\Dropbox\Doctorado\latex\tesis\Chapters\ejemplosLatex.tex=D:\Dropbox\Doctorado\latex\tesis\Chapters\ejemplosLatex.tex-AutoSave
+D:\Dropbox\Doctorado\latex\tesis\Chapters\PNML.tex=D:\Dropbox\Doctorado\latex\tesis\Chapters\PNML.tex-AutoSave
