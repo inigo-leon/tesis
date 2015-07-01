@@ -91,14 +91,12 @@
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
-\emph{Supervisor:} \\
+\emph{Advisors:} \\
 \href{http://www.jamessmith.com}{\supname} % Supervisor name - remove the \href bracket to remove the link  
 \end{flushright}
 \end{minipage}\\[3cm]
  
-\large \textit{A thesis submitted in fulfilment of the requirements\\ for the degree of Computer Science}\\[0.3cm] % University requirement text
-\textit{in the}\\[0.4cm]
-\groupname\\\deptname\\[2cm] % Research group name and department name
+\large \textit{A thesis submitted in fulfilment of the requirements\\ for the degree of Doctor on Electrical Engineering, \\Mathematics and  Computer Science}\\[5cm] % University requirement text
  
 {\large \today}\\[4cm] % Date
 %\includegraphics{Logo} % University/department logo - uncomment to place it
@@ -163,18 +161,35 @@ Dave Barry
 
 \abstract{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
 
-El abstract debe caber en esta pagina, centrada verticalmente. Debe comenzar
-o contener "My original contribution to knowledge is\dots"
+In this thesis I approach the study of Petri
+nets from the point of view of the security.
+There several goals in this thesis.
+First of all, I will define a subnetting process by building a framework of definitions and notations to create
+subnets from the original Petri net. Then, the creation of a PNML\ extension that
+allows the representation of subnets. In this work only the structure of the network
+is processed. The study of markings and properties of
+nets with hidden pieces will we analyzed in further
+works.
+
+One application of this subnetting and PNML\ representation is the
+possibility of hiding part of a Petri net,
+facing a possible distribution, maintaining the privacy of
+the critical, secret, or complex parts of the system.
+However this information is not eliminated from the net, but encrypted inside.
+Other application explained is the possibility of digital signature of subnets, providing
+security services to the net and/or subnets.  
+
+My original contribution to knowledge are:
+\begin{enumerate}
+\item Comprehensive study of subnets, defining interfaces that abstract their
+internal structure from the exterior by using interfaces. A method to build
+these subnets for the complete Petri net is explained and analyzed matrixed. \item PNML has no way to represent subnets, so I approach a possible PNML extension to do it. 
+\item Applications of subnetting and PNML extension to represents subnets
+allow me to apply several security technics
+that offers encryption, data integrity, authentication and non repudiation
+\end{enumerate}
 
 
-Mis contribuciones:
-
-- Definicion exhaustiva de subredes, incluyendo particiones e interfaces
-de las subredes
-
-- Definicion de una posibleextension de PNML para representar estas subredes 
-
-- Aplicaciones a esta extesion: Cifrado (y firmado si da tiempo)
 
 }
 
@@ -226,6 +241,13 @@ I fought to combine my job, my family and studies. I has been a difficult work, 
 {
 \textbf{PN} & \textbf{P}etri \textbf{N}et \\
 \textbf{SN} & \textbf{S}ub\textbf{N}et \\
+\textbf{N} & \textbf{N}et \\
+\textbf{PIM} & \textbf{P}laces \textbf{I}nfluence \textbf{M}atrix \\
+\textbf{TIM} & \textbf{T}ransitions \textbf{I}nfluence \textbf{M}atrix \\
+
+
+
+
 ...         & //TODO
 }
 
@@ -290,10 +312,10 @@ I fought to combine my job, my family and studies. I has been a difficult work, 
 \input{Chapters/LiteratureReview} 
 \input{Chapters/PrivateInformation} 
 \input{Chapters/PNML}
-\input{Chapters/XMLEncryption} 
-\input{Chapters/XMLSignature} 
+\input{Chapters/Security} 
+%\input{Chapters/XMLSignature} 
 %\input{Chapters/Chapter7} 
-%\input{Chapters/Conclusions} 
+\input{Chapters/Conclusions} 
 \input{Chapters/ejemplosLatex} 
 
 %----------------------------------------------------------------------------------------
@@ -329,6 +351,7 @@ I fought to combine my job, my family and studies. I has been a difficult work, 
 
 
 \bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
-\textbf{Faltan las referencias de paginas web}
+
+
 \end{document}  
  

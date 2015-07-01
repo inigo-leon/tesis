@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+  <net id="latorre1" type="http://www.pnml.org/version-2009/grammar/ptnet">
+    <page id="page1">
+      <subnet id="N1">
+        <interface id="N1-interface">
+          <gate action="input" id="N1-igp1" type="place"/>
+          <gate action="output" id="N1-ogt1" type="transition"/>
+          <gate action="output" id="N1-ogp1" type="place"/>
+        </interface>
+        <content id="N1_content">
+          <xenc:EncryptedData xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" 
+              Type="http://www.w3.org/2001/04/xmlenc#Content">
+            <xenc:EncryptionMethod 
+                Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+              <xenc:EncryptedKey 
+                  xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+                <xenc:EncryptionMethod 
+                    Algorithm="http://www.w3.org/2001/04/xmlenc#kw-tripledes"/>
+                <xenc:CipherData>
+                  <xenc:CipherValue>
+                    adSAmnteqXFUBdX3I6ClLoe27subXx/IPie9RUh3Viw=
+                  </xenc:CipherValue>
+                </xenc:CipherData>
+              </xenc:EncryptedKey>
+            </ds:KeyInfo>
+            <xenc:CipherData>
+              <xenc:CipherValue>
+49adWIMQ3edEv8SArCsR6090GQU+2pjRhvkMH/kOlHDVcJmGw5Edu7jzIvZc7FF/4vzfKy8hgdXi
+MIEQLhd7dbLdoBmkbZzZBnEZbD+JELC3lenV328xv0Y5jtx60vDM+cOEY94C8ctSlGmswlTC7m/h
+pXyXtMtAipKcPBtqU6HiXW90gpEIosnEhat6+hyjpESgiQgbuHkYmSeCCqwMWvIR++UkB7Sf6hzP
+er4QLUwZfuAbLH9NbReLmLbjpumGhWnMbvKXvwYAWnl1sjrtqnU2NZBWBLV8Uo3EMrTajI/2KA6o
+XBo/piONJDEK5Q1lkpLm/+RFD+V1D7iKIXzUVdkOx4RbpOQarrz6bfnwfUBpPSDT+W1qz+8IILmd
+DfXvyKGAefKzeOMiHf3YnSso+a5rm61XSmTVClBv2kYqcuADuh9GMsSVG1Uu94eg2C67DWKXFADK
+dELk4g/W7FFDn77pqtcSG0BRb4NbGWa0z+m+hrXm/C8S8Ha/36A2DV1ysoAjrJlWsSxIPqf9gxL+
+vWXpBr1d7KdD93g15natV4X80BD+2sWu23ZUlSavjLsOfNcocxIzlSXWlwGYyHoHGuHPcRzjn8Sr
+hQ4s4gypOKlisc6EgRjbc+UlvLkVnc91LHHWKOhJuvCdgiodl6w//qf7J8X6ase0fhFBkHIUoOMz
+XOQek0PKRgzHgz3iIkynwzShSpxSIaADynlJq6zUbbN77aOV4JyXJQRvyizZBCQz/kea8r1zBHJU
+hPafRtTW1gZADB2C6xhrkE2KmMXlPzRwDGzPcRIfMo1frpg8PwJkNUhoFZSiZVvT0ioB/jf4ITIO
+Z/ffRxNokOVWHInjzjE09S5vyDli8V0q2fe1SOnjp/vKGZgv6cYxh6TrtjKGsC8J3nGgIb6PcSKR
++hzGCr8ZwGL3W8O5HogAELLDOC/u6knAdsOwCVPFcK72NroFPJu5O9ulGAJqNUoMlXLMAq1PfPmL
+zdJPFcHSglOW/QvVtB3i7CyZrakyE2AiGZfmJko+pzFOI9VqkN989XHkchpF6gcQ1Zwcnxf8bben
+fqT5zUVqStA4xJGCVHtyWIkIWGdbmIpzdEpiDUuozj+HzmC2zTS3r7EaViii34T0JkbOFt6IfTDn
+NNX+LeH8P3JGxKEv27drQmchpWXrvithwt78csYPB6G395Wnpo+joQcQ7Bv7TREpu1n+0KdydZ3K
+aGyozTHOkGMKoL1NCAVoj9f/4chjn/k9NM58KF63F0BtIDWS70k69iQb2rs5kAyA2SJ7YCkE6OI3
+LXgAFjgOrXqjF9NSlwt3eEFsDWRdhn/epVGbkexdnjXBOnGW79AFcClYsVkj1vsSmJx5EvkvIw==
+              </xenc:CipherValue>
+            </xenc:CipherData>
+          </xenc:EncryptedData>
+        </content>
+      </subnet>
+      <subnet id="N2">
+        <interface id="N2-interface">
+          <gate action="input" id="N2-igp1" type="place"/>
+          <gate action="output" id="N2-ogt1" type="transition"/>
+        </interface>
+        <content id="N2_content">
+          <xenc:EncryptedData xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" 
+              Type="http://www.w3.org/2001/04/xmlenc#Content">
+            <xenc:EncryptionMethod 
+                Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+              <xenc:EncryptedKey xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+                <xenc:EncryptionMethod 
+                    Algorithm="http://www.w3.org/2001/04/xmlenc#kw-tripledes"/>
+                <xenc:CipherData>
+                  <xenc:CipherValue>
+                    adSAmnteqXFUBdX3I6ClLoe27subXx/IPie9RUh3Viw=
+                  </xenc:CipherValue>
+                </xenc:CipherData>
+              </xenc:EncryptedKey>
+            </ds:KeyInfo>
+            <xenc:CipherData>
+              <xenc:CipherValue>
+f3qOP5rBe3h/B4j1ruwdyBHDf59hu1Z27UhN9U4VgUisgzKcFcT6dO6GGtveXBoSHKv/oi8ZVCsS
+9XWuAVZsMk7LB4M2A3hKsDqEpGsPWD1S+9Z84vNZbq1YGaukA/VqeCV/tmTEIS9p5ygFJwszS9Ri
+o81rQ+dyOB9GsyLl1HQbaeRAvbY5mut5z+wdgOeiBmdTLkbJ+WGqv0RNK/X8lxGmTdqNiczWvHQ7
+cozZbJo0nG2UqtUqLRNnLIfHL3YTORLpEEwg09rUIgxHr9eNv/Q7Nxxi4Rv3DeGL9LGWoZm2F8a6
+rUQ8vxoQBPzTkvcAFcMyD2VWx3YfirCE+CsIW1rNEm8YKRsbix4TDBjkAzU7shnHtlCR+AwSF24V
+TtqMSZEvdDBoTYaublqqwpuwjejIyJ72oswQgKDPYdgVNZrtUL5Cf7VLXVzD7gTlg2rRFaEPUlID
+jDQiHE7JHNmKWlk4MaJ/XKnQ/uyEdFNF7BDpykwZhWkDZsM+rXSauG72bmtBc6xljdrllwMtE9pV
+Q/T4PO6Q3zORLQ6+vTlYDCQ9N0AsPNt481I2cOg/T/qOteTk2/vavoU8fO2e/RKDjLSzznRe52aV
+GTfbLnbjNgewPcIFp8qFUPhWBExfs2Pa
+              </xenc:CipherValue>
+            </xenc:CipherData>
+          </xenc:EncryptedData>
+        </content>
+      </subnet>
+      <subnet id="N3">
+        <interface id="N3-interface">
+          <gate action="input" id="N3-igp1" type="place"/>
+          <gate action="output" id="N3-ogt1" type="transition"/>
+        </interface>
+        <content id="N3_content">
+          <xenc:EncryptedData xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" 
+              Type="http://www.w3.org/2001/04/xmlenc#Content">
+            <xenc:EncryptionMethod 
+                Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+              <xenc:EncryptedKey 
+                  xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+                <xenc:EncryptionMethod 
+                    Algorithm="http://www.w3.org/2001/04/xmlenc#kw-tripledes"/>
+                <xenc:CipherData>
+                  <xenc:CipherValue>
+                    adSAmnteqXFUBdX3I6ClLoe27subXx/IPie9RUh3Viw=
+                  </xenc:CipherValue>
+                </xenc:CipherData>
+              </xenc:EncryptedKey>
+            </ds:KeyInfo>
+            <xenc:CipherData>
+              <xenc:CipherValue>
+0BQYbCoHJjFPwKoFK6WbZ/0z0GT16QoHSJnJ8S2KSuKaXrbKrX7i+mAEXWqPIkBi0FZg18FwHlba
+BD2lD3B+M00Je+Jvig1r7rxwVtI4ZkCDlDBi7cC0uzB3E6f3WmD1Rz8PyigMfAwkUW8bHnblqU+R
+SzRZEyjt9B8NEe3rCtuEEQRs/HGa/WTrYP9wUjx0KKYkLTD5PUz3tAsHFTpFOTlw9jMgIq5QC9eP
+wuufPGQ=
+              </xenc:CipherValue>
+            </xenc:CipherData>
+          </xenc:EncryptedData>
+        </content>
+      </subnet>
+      <place id="p1"/>
+      <place id="p6"/>
+      <transition id="t4"/>
+      <transition id="t8"/>
+      <arc id="a1" source="p1" target="N1-igp1"/>
+      <arc id="a7" source="N1-ogt1" target="N3-igp1"/>
+      <arc id="a11" source="N1-ogp1" target="p1"/>
+      <arc id="a12" source="N3-ogt1" target="N2-igp1"/>
+      <arc id="a16" source="N2-ogt1" target="t8"/>
+      <arc id="a17" source="t8" target="p1"/>
+    </page>
+  </net>
+</pnml>

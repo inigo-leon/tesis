@@ -212,7 +212,7 @@
 %       defined as \examname above so you cite it as \examname
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Titulo de la tesis} % Your thesis title - this is used in the title and abstract
+\thesistitle{Security in Petri nets sharing and storage: subnets, privacy, integrity, authentication and non repudiation} % Your thesis title - this is used in the title and abstract
 %-------------------------------------------------  
 \supervisor{Dr. Emilio \textsc{Jimenez}} % You supervisor's name - this is used in the title page
 %-------------------------------------------------   
@@ -245,7 +245,7 @@
                 {DEPARTMENT OF ELECTRICAL ENGINEERING}}
 %-------------------------------------------------                
 \group{\texorpdfstring{\href{Research Group Web Site URL Here (include http://)} % Your research group's URL
-                {Research Group Name}} % Your research group's name - this is currently used in the title page 
+                {Modelling and Simulation in Science and Egineering}} % Your research group's name - this is currently used in the title page 
                 {Research Group Name}}
 %-------------------------------------------------                
 \GROUP{\texorpdfstring{\href{Research Group Web Site URL Here (include http://)} % Your research group's URL

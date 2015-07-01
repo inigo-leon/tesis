@@ -6,26 +6,6 @@
 
 \lhead{Chapter 2. \emph{Literature review}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
-//BORRAR
-
-\begin{itemize}
- \item \textbf{G - Petri nets general - COMPLETO}
- \item \textbf{SM - Simulacion de modelos
-- COMPLETO} \item \textbf{EPN - Extensiones de Petri nets originales
-} \item \textbf{R - Reduccion de redes
-- COMPLETO} \item \textbf{SN - Subredes
-- COMPLETO }\item \textbf{REP - Representation - COMPLETO}
- \item \textbf{PROP - Propiedades de PN - COMPLETO}
- \item \textbf{HID - Ocultacion de partes
-- COMPLETO} \item \textbf{PNML - PNML
-- COMPLETO }\item \textbf{PNMLE - Extensiones PNML
-- COMPLETO}
-\end{itemize}
-
-
-PREGUNTAR POR \cite{EPN-Campos1992352}
-\cite{EPN-SM-Latorre2010152}
-//
 
 In this chapter I am going to go over the ancient Petri net history. 
 This work is a very basic investigation 
@@ -37,13 +17,13 @@ For this literature review, I will follow the structure of this thesis:
 \item First of all, I am going to describe some generalities of Petri nets
 as an introduction
 \item Then I will describe subnets and the process of splitting Petri nets
-into several subnets. Some of those subnets are going to be hidden 
+into several subnets. Some of those subnets (or the complete net) are going to be secured. 
 \item The next step is to explain some possible Petri net representations
-and my selection of PNML for the hiding process
+and my selection of PNML for the securizing process
 \item Once selected PNML, I am going to extend this language to support the
 subnets defined before
-\item The last step is the hiding properly speaking. To do this, I will use the standard XMLEncryption for ciphering the secret information
-\end{enumerate}
+\item The last step is the securing properly speaking. To do this, I will use the standard XMLEncryption for ciphering the secret information and XMLSignature
+for integrity, authentication and non repudiation. \end{enumerate}
 
 \section{Introduction. Petri nets}
 
@@ -60,9 +40,6 @@ systems\cite{EPN-SM-Jensen2007213,EPN-SM-Kristensen200819}, manufacturing \cite{
 processes \cite{SM-Guasch2002}, discrete event systems \cite{EPN-Balbo1998}, ...
 \item Simulation of industrial applications \cite{SM-Jimenez2006159,SM-Latorre2013346}, logistic and production systems \cite{SM-Jimenez2004143},...
 \end{itemize} 
-
-//TODO Incluir mas aplicaciones de las redes de Petri
-
 
 This work is not about of Petri net application, so I am not
 going to deepen this field. 
@@ -86,8 +63,9 @@ Petri nets, coloured Petri nets
 \item Khomenko, V \cite{G-SM-Khomenko2003458}: High level Petri nets
 \item Ratzer \cite{EPN-PROP-Ratzer2003450}: Coloured Petri nets
 \item Kristensen \cite{EPN-Kristensen2004626,EPN-SM-Kristensen200819}: Coloured Petri nets
-\item Silva \cite{EPN-Silva2004253}: Fluid of Petri nets
+\item Silva \cite{EPN-Silva2004253}: Fluid Petri nets
 \item Latorre \cite{EPN-SM-Latorre2010152,EPN-SM-Latorre2010247}: Aggregation Petri nets and coloured Petri nets
+\item Campos \cite{EPN-Campos1992352}: Stochastic Petri net models
 \item Recalde \cite{EPN-Recalde2010235}: Continuous Petri nets
 \item David \cite{EPN-David2010}: Discrete, continuous and hybrid Petri nets
 \item Fraca \cite{EPN-Fraca201221}: Fluid and untimed Petri nets
@@ -96,7 +74,7 @@ Petri nets and fluid Petri nets
 \end{itemize}
 
 The study of
-subnetting and hiding of all of them are outside the scope of this work,
+subnetting and securing of all of them are outside the scope of this work,
 but as all of these Petri nets extensions are reproducible by a graph, they are
 susceptible of applying the same described methods with light variations
 (like color, arc types, ...). 
@@ -131,21 +109,20 @@ Petri nets. My contribution in this field is the description of a way to replace
 case of my description of macroplace an macrotrasition. However I don't deepen the properties because it is not my goal.
 
 Other works important in this section are Fahmy's ones \cite{SN-Fahmy1990321,SN-Fahmy1993127}.
-At first sight (only reading the title), it seems to be the same I explain in the chapter \ref{Chapter:Private_information_inPetri_nets.Subnets}. But
+At first sight (only reading the title), it seems to be the same I explain in the chapter \ref{Chapter: Subnets}. But
 this is not true. These two articles by Famhy are about the analysis of large Petri nets by cutting them into pieces. The second one \cite{SN-Fahmy1993127} is and extension of the first one \cite{SN-Fahmy1990321}. The idea is "divide
 and conquer" over the net. The partitioning of a net is useful because it preserves the properties of the original whole net. He centers the interest
 on the characteristics of the net and the partitions. But he doesn't make an extensive study of subnets, that is what I do in my work. Basically, it is something like the previous paragraph: it can be seen as a particular case of my study. 
-
-The last entrance in this section is the work of Xia \cite{R-Xia20111662}. His objective is to encapsulate a subnet
-in one place or transition. Then he study several ways of simplify that subnet
-or erasing
-redundant information. These subnets are grouped into a single point of execution. I want to go further by defining hidden (not grouped) parts of the net. However, this work  has much to do with macroplaces and macrotransitions  introduced in chapter \ref{Chapter:Private_information_inPetri_nets.Subnets}.
 
 Other work of interest is Hsieh' one \cite{G-PROP-Hsieh2011496}, where he
 analyzes non-ordinary Petri nets for flexible assembly/disassembly processes
 based on structural decomposition, but it is not a net decomposition but a process decomposition. So it has no more interest for my work. 
 
-\section{Petri nets representation}
+The last entrance in this section is the work of Xia \cite{R-Xia20111662}. His objective is to encapsulate a subnet
+in one place or transition. Then he study several ways of simplify that subnet
+or erasing
+redundant information. These subnets are grouped into a single point of execution. I want to go further by defining hidden (not grouped) parts of the net. However, this work  has much to do with macroplaces and macrotransitions  introduced in chapter \ref{Chapter: Subnets}.
+\section{Petri net representation}
 
 Other important question in this thesis is the election of a Petri net representation
 that allows us to translate defined subnets into that format in order to
@@ -206,7 +183,7 @@ But this is not the main goal of my work. My intention is to describe the subnet
 
 
 
-\section{Hide information on Petri nets}
+\section{Securize information on Petri nets}
 
 There is very little literature about this topic (except my own work \cite{HID-Inigo2011MT}).
 There are a couple of articles that seems to threat the theme, but with a deeper study we can see that the achievements are not what I am looking for.
@@ -215,32 +192,66 @@ Mahulea \cite{HID-Mahulea2013387} point the problem of observability of timed CP
 in determined circumstances  it is difficult to estimate the initial/ actual state/marking
 of a Petri net. Anything like my work. 
 
-\textbf{//COMPLETAR ESTE} By his side, Saabori \cite{HID-Saboori20106759} raise the possibility of
-
+By his side, Saabori \cite{HID-Saboori20106759} approach the topic of hiding
+but not in Petri net structure, but in states of the Petri net. So it doesn't
+help. 
+ 
 Other work that at first sight may be interesting is one article from Velilla
 \cite{SM-Velilla198875} that define a mechanism for safe implementation of
 concurrent systems. But this safety is for the process itself, not for the
 safety of the implementation. So it doesn't contribute to my work. 
  
-My intention is to hide part of a Petri net. The way to achieve this goal
-is cutting the net in subnets, represent them in PNML and hide it. But there is not literature about the PNML representation for subnets, so this
-is new knowledge.
+My intention is to securize part of a Petri net in two ways: hide and sign. The way to achieve this goal
+is cutting the net in subnets, represent them in PNML and then one or more
+of this goals:
+\begin{itemize}
+\item hide it
+\item avoid unwanted changes
+\item ensure identity of the custodian of the Petri net
+\item avoid the impersonation of the custodian
+\end{itemize}
+
+But there is not literature about the PNML representation for subnets, so
+this is new knowledge.
 
 
 
 
 
-\section{XMLEncryption}
+\section{Security: XMLEncryption and XMLSignature}
 
-XMLEncryption is an W3C recommendation. In particular, it is a way to cipher XML content. And not only that. Actually, it is a way to cipher any kind
-of information and store this ciphered content in xml format. There are thousands
-of articles and applications of it, but, as it is a W3C recommendation, it
-is completely defined, and the last version of this definition is \cite{XMLENC-w3.org/xmlenc-core1}, In this work, I apply this method in order to achieve the goal of hide part
-of a petri net. My contribution to knowledge in this case is to mix two different
+Both XMLEncryption and XMLSignature are W3C recommendations.
+
+XMLEncryption
+it is a way to cipher xml content. And not only that. Actually, it is a way to cipher any kind
+of information and store this ciphered content in xml format. In the same way, XMLSignature is a standard mode to sign xml or non xml content.
+
+ 
+There are thousands
+of articles and applications of it, but, as they are W3C recommendation, they are completely defined. The last version of XMLEncryption and XMLSignature definition  are \cite{XMLENC-w3.org/xmlenc-core1,XMLSIG-w3.org/xmlsig-core1} respectively.
+
+In this work, I apply these technologies in order to achieve the next goals
+\begin{itemize}
+\item Privacy: hide a entire or a part of a petri net
+\item Integrity: nobody should modify concrete parts of a Petri net without
+being detected.
+\item Authentication: guarantee that nobody can impersonate another, for
+example stealing the creation of a Petri net or part of it.
+\item Non repudiation: ensure that nobody but a concrete person has done
+something in a Petri net (or part of it), for example, sign a Petri net.
+
+\end{itemize}
+
+In particular, encryption provides privacy. Digital signature provides
+integrity, authentication and non repudiation. 
+
+
+My contribution to knowledge in this case is to mix two different
 knowledge areas as Petri nets
-and encryption are.
+and information security (encryption/digital signature) are.
 
 So there are no literature about this topic, because nobody has developed it until I do.   
 
 
+   
 

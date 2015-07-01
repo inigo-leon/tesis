@@ -633,7 +633,7 @@
 	document_type = {Article},
 	source = {Scopus}
 }
-@Book{EPN-Jensen20091,
+@Book{EPN-Jensen2009,
 	author = {Jensen, K  and Kristensen, L.M},
 	title = {Coloured Petri Nets: Modelling and validation of concurrent systems},
 	journal = {Coloured Petri Nets: Modelling and Validation of Concurrent Systems},
@@ -789,7 +789,7 @@
 	source = {Scopus}
 }
 @Article{SM-Recalde1998267,
-	author = {Recalde, L.b  and Teruel, E.b  and Silva, M.a  b b  },
+	author = {Recalde, L. and Teruel, E. and Silva, M.},
 	title = {Modeling and analysis of sequential processes that cooperate through buffers},
 	journal = {IEEE Transactions on Robotics and Automation},
 	year = 1998,
@@ -821,7 +821,7 @@
 	source = {Scopus}
 }
 @Article{SM-Silva1997182,
-	author = {Silva, M.a  b  and Teruel, E.a },
+	author = {Silva, M. and Teruel, E.},
 	title = {Petri nets for the design and operation of manufacturing systems},
 	journal = {European Journal of Control},
 	year = 1997,
@@ -971,9 +971,33 @@
 }
 @Misc{XMLENC-w3.org/xmlenc-core1,
 	title = {XML Encryption Syntax and Processing Version 1.1},
-	year = 2009,
-	note = {[Online; accessed 10-Jun-2015]},
+	year = 2013,
+	note = {[Online; accessed 20-Jun-2015]},
 	url = {http://www.w3.org/TR/xmlenc-core1/}
+}
+@Misc{XMLSIG-w3.org/xmlsig-core1,
+	title = {XML Signature Syntax and Processing Version 1.1},
+	year = 2013,
+	note = {[Online; accessed 20-Jun-2015]},
+	url = {http://www.w3.org/TR/xmldsig-core1/}
+}
+@Misc{XMLSIG-w3.org/xpath,
+	title = {XML Path Language (XPath)},
+	year = 1999,
+	note = {[Online; accessed 20-Jun-2015]},
+	url = {http://www.w3.org/TR/xpath/}
+}
+@Misc{XMLSIG-w3.org/xmlsig-filter2,
+	title = {XML-Signature XPath Filter 2.0},
+	year = 2002,
+	note = {[Online; accessed 20-Jun-2015]},
+	url = {http://www.w3.org/TR/xmldsig-filter2/}
+}
+@Misc{XMLSIG-w3.org/xmlenc-decrypt,
+	title = {Decryption Transform for XML Signature},
+	year = 2002,
+	note = {[Online; accessed 25-Jun-2015]},
+	url = {http://www.w3.org/TR/xmlenc-decrypt}
 }
 @Misc{PNML-pnml.org,
 	title = {Pnml.org - PNML reference site},
