@@ -214,7 +214,7 @@
 
 \thesistitle{Security in Petri nets sharing and storage: subnets, privacy, integrity, authentication and non repudiation} % Your thesis title - this is used in the title and abstract
 %-------------------------------------------------  
-\supervisor{Dr. Emilio \textsc{Jimenez}} % You supervisor's name - this is used in the title page
+\supervisor{Dr. Juan Ignacio \textsc{Latorre} \\ Dr. Mercedes \textsc{P\'erez}} % You supervisor's name - this is used in the title page
 %-------------------------------------------------   
 \examiner{} % Your examiner's name - this is not currently used anywhere in the template, cite it with \examname if you want it
 %-------------------------------------------------   
@@ -237,15 +237,15 @@
                 {UNIVERSITY OF LA RIOJA}}
 %-------------------------------------------------                
 \department{\texorpdfstring{\href{Department or School Web Site URL Here (include http://)} % Your department's URL
-                {Department of Electrical Engineering}} % Your department's name - used in the title page and abstract
-                {Department of Electrical Engineering}}
+                {Department of Electrical Engineering and\\ Department of Mathematics and Computer Sciences}} % Your department's name - used in the title page and abstract
+                {Department of Electrical Engineering and\\ Department of Mathematics and Computer Sciences}}
 %-------------------------------------------------                
 \DEPARTMENT{\texorpdfstring{\href{Department or School Web Site URL Here (include http://)} % Your department's URL
-                {DEPARTMENT OF ELECTRICAL ENGINEERING}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
+                {DEPARTMENT OF ELECTRICAL ENGINEERING AND\\ DEPARTMENT OF MATHEMATICS AND COMPUTING SCIENCES}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
                 {DEPARTMENT OF ELECTRICAL ENGINEERING}}
 %-------------------------------------------------                
 \group{\texorpdfstring{\href{Research Group Web Site URL Here (include http://)} % Your research group's URL
-                {Modelling and Simulation in Science and Egineering}} % Your research group's name - this is currently used in the title page 
+                {Modelling and Simulation in Science and Engineering}} % Your research group's name - this is currently used in the title page 
                 {Research Group Name}}
 %-------------------------------------------------                
 \GROUP{\texorpdfstring{\href{Research Group Web Site URL Here (include http://)} % Your research group's URL
@@ -253,12 +253,12 @@
                 {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
 %-------------------------------------------------                
 \faculty{\texorpdfstring{\href{Faculty Web Site URL Here (include http://)} % Your faculty's URL
-                {Faculty of Science, Agrifood Studies and Computing}} % Your faculty's name - this is currently used in the abstract page
-                {Faculty of Science, Agrifood Studies and Computing}}
+                {Faculty of Science, Agrifood Studies and Computing Sciences}} % Your faculty's name - this is currently used in the abstract page
+                {Faculty of Science, Agrifood Studies and Computing Sciences}}
 %-------------------------------------------------                
 \FACULTY{\texorpdfstring{\href{Faculty Web Site URL Here (include http://)} % Your faculty's URL
-                {FACULTY OF SCIENCE, AGRIFOOD STUDIES AND COMPUTING}} % Your faculty's name in capitals - this is not currently used anywhere in the template, cite it with \FACNAME if you want it
-                {FACULTY OF SCIENCE, AGRIFOOD STUDIES AND COMPUTING}}
+                {FACULTY OF SCIENCE, AGRIFOOD STUDIES AND COMPUTING SCIENCES}} % Your faculty's name in capitals - this is not currently used anywhere in the template, cite it with \FACNAME if you want it
+                {FACULTY OF SCIENCE, AGRIFOOD STUDIES AND COMPUTING SCIENCES}}
 %----------------------------------------------------------------------------------------    
 
 % The default title page, this is not used in this www.latextemplates.com version            
@@ -332,8 +332,8 @@
     \bigskip
     {\normalsize \facname \par} % Faculty name
     {\normalsize \deptname \par} % Department name
-    \bigskip
-    {\normalsize \degreename\par} % Degree name
+    %\bigskip
+    %{\normalsize \degreename\par} % Degree name
     \bigskip
     {\normalsize\bf \@title \par} % Thesis title
     \medskip
