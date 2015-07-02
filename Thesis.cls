@@ -237,11 +237,11 @@
                 {UNIVERSITY OF LA RIOJA}}
 %-------------------------------------------------                
 \department{\texorpdfstring{\href{Department or School Web Site URL Here (include http://)} % Your department's URL
-                {Department of Electrical Engineering and\\ Department of Mathematics and Computer Sciences}} % Your department's name - used in the title page and abstract
-                {Department of Electrical Engineering and\\ Department of Mathematics and Computer Sciences}}
+                {Department of Electrical Engineering and\\ Department of Mathematics and Computer Science}} % Your department's name - used in the title page and abstract
+                {Department of Electrical Engineering and\\ Department of Mathematics and Computer Science}}
 %-------------------------------------------------                
 \DEPARTMENT{\texorpdfstring{\href{Department or School Web Site URL Here (include http://)} % Your department's URL
-                {DEPARTMENT OF ELECTRICAL ENGINEERING AND\\ DEPARTMENT OF MATHEMATICS AND COMPUTING SCIENCES}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
+                {DEPARTMENT OF ELECTRICAL ENGINEERING AND\\ DEPARTMENT OF MATHEMATICS AND COMPUTER SCIENCE}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
                 {DEPARTMENT OF ELECTRICAL ENGINEERING}}
 %-------------------------------------------------                
 \group{\texorpdfstring{\href{Research Group Web Site URL Here (include http://)} % Your research group's URL
@@ -253,12 +253,12 @@
                 {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
 %-------------------------------------------------                
 \faculty{\texorpdfstring{\href{Faculty Web Site URL Here (include http://)} % Your faculty's URL
-                {Faculty of Science, Agrifood Studies and Computing Sciences}} % Your faculty's name - this is currently used in the abstract page
-                {Faculty of Science, Agrifood Studies and Computing Sciences}}
+                {Faculty of Science, Agrifood Studies and Computer Science}} % Your faculty's name - this is currently used in the abstract page
+                {Faculty of Science, Agrifood Studies and Computer Science}}
 %-------------------------------------------------                
 \FACULTY{\texorpdfstring{\href{Faculty Web Site URL Here (include http://)} % Your faculty's URL
-                {FACULTY OF SCIENCE, AGRIFOOD STUDIES AND COMPUTING SCIENCES}} % Your faculty's name in capitals - this is not currently used anywhere in the template, cite it with \FACNAME if you want it
-                {FACULTY OF SCIENCE, AGRIFOOD STUDIES AND COMPUTING SCIENCES}}
+                {FACULTY OF SCIENCE, AGRIFOOD STUDIES AND COMPUTER SCIENCE}} % Your faculty's name in capitals - this is not currently used anywhere in the template, cite it with \FACNAME if you want it
+                {FACULTY OF SCIENCE, AGRIFOOD STUDIES AND COMPUTER SCIENCE}}
 %----------------------------------------------------------------------------------------    
 
 % The default title page, this is not used in this www.latextemplates.com version            

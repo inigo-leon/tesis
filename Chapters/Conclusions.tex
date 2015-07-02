@@ -6,9 +6,7 @@
 
 \lhead{Chapter . \emph{Conclusions}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
-\textbf{Intentar que sea un resumen de todo lo tratado, haciendo hincapie en lo aportado
-y en futuras lineas de investigacion. Que no sea corta. Lo suficientemente
-larga para que alguien que se lea la tesis pueda recordarla completamente}
+%\textbf{Intentar que sea un resumen de todo lo tratado, haciendo hincapie en lo aportado y en futuras lineas de investigacion. Que no sea corta. Lo suficientemente larga para que alguien que se lea la tesis pueda recordarla completamente}
 
 Throughout this paper I have enriched Petri nets with definitions and properties. From this initial presentation, have been building a series of elements as a basis for further investigation. We defined subnets, subnets classifications have been studied, we have defined front-ends (interfaces) for those subnets, etc.. From this point is possible a further study of these subnets (their properties, utilities,....)
 and the methodological study of securing parts of Petri nets. 
@@ -36,7 +34,84 @@ The next chapter is the state of the art. In this chapter, the literature
 about subnets, hiding, encryption, Petri net representation, PNML extensions,
 Petri net securing, etc. are grouped and analyzed in order to understand the general knowledge about these topics, related to my objectives. The general conclusions in this part are:
 \begin{itemize}
-\item There are lots of..... 
+\item There are lots of authors and contents about Petri nets but very few
+about subnets
+\item There is no standard way to represent
+subnets in a form that is not graphical.
+\item Many works studied security using Petri nets, but there is not literature
+about security over Petri nets themselves.
+\item In particular there is not material on how to hide parts of a Petri nets and either about integrity, authentication or non repudiation
 \end{itemize}
  
-   
+Once reviewed the state of the art, I enter into the study of subnets. The main goal is to find a structure of Petri subnets that is easily represented in other formats in addition to graphical mode.
+
+In this chapter I explain how to cut a Petri net into several subnets using the incidence matrix. The method of cut into two subnets is studied. This method split the incidence matrix into four parts: the subnets per se and two other parts that defined the interaction between this two subnets ($N_1$,
+$N_2$, $PIM$ and $TIM$). This will allow us to define the frontend of a subnet in order to abstract is content from the rest of the net.
+
+Once explained subnets, I make a subnet classification. This classification is based on the structure properties. So we can talk about:
+
+\begin{itemize}
+\item disjointed subnets, if there are not arcs between the element of the
+subnet
+\item macroplaces, if the only way to enter the subnet is from a transition
+outside towards a place inside
+\item macrotransitions, if the only way to enter the subnet is from a place
+outside towards a transition inside
+\item sinkhole, if there is no arc leaving the subnet
+\item source, if there is no arc entering the subnet
+\end{itemize}
+
+Then one of the main parts of the thesis is studied: the subnet frontend.
+It is a very important concept because the rest of the thesis is based on
+it: if I define a subnet with its own frontend, I can know its behaviour without the necessity of knowing the internal structure. In this chapter, I introduce the critical concepts of frontend, input and output gates from
+places or transitions and attachable net that are going to be used later.
+
+This part of the Petri subnets theory is finished, so I can go on the representation
+of this kind of subnets. As one of my goals is to hide parts of a Petri net,
+but not erasing information ,the main problem is to find a way to represent
+a subnet in order to cipher information. From my point of view, the only alternative nowadays to solve this problem is the use of PNML. Other representations
+cannot maintain or recover the original information once is hidden.
+
+PNML is a xml standard way to represent Petri nets. But it has a problem:
+there is noway to represent subnets. So I have explained a possible PNML extension
+that support this kind of information. The key is the definition of several custom xml tags: \texttt{<subnet>}, \texttt{<interface>}, \texttt{<gate>} and \texttt{<content>}. These four tags are enough to my goals. But Petri
+nets are a really wide knowledge area. So i don't define a closed PNML extension, but a way to each person to extend it as needed. 
+
+At this moment I have the basis to secure a Petri net (or parts of it). The
+next step is the securization. The first step is the privacy of the whole
+net or only of a part. The technology that I have selected to reach this goal is XMLEncryption. As it is an standard, it is widely extended and
+well known. It has de possibility of symmetric and asymmetric ciphering so
+the confidentiality of the information is ensured. This method of encryption replace tags in the xml file by encrypted content, only accessible by people
+that
+knows the right decrypting key. In this case, the tag replaced is \texttt{<content>},inside
+the tag \texttt{<subnet>}. Once this is done only the frontend of the subnet
+is exposed, maintaining two properties:
+
+\begin{itemize}
+\item The structure of the entire net is nit affected, because the interaction
+with elements of the subnet is always through the frontend
+\item The information has been not deleted. It is hidden, waiting for somebody
+with the correct key.
+\item I can change one subnet by another if they have the same frontend,
+even though they are ciphered.
+\end{itemize} 
+
+The other goals of security are data integrity (not allow unwanted modifications), authentication (know the author or responsible), and non repudiation (nobody
+can be supplanted by other one). All of these goals can be achieved by a digital
+signature. In this case I my proposition is the use of XMLSignature, that is going to
+allow to sign the entire Petri net or only parts of it (the secured ones)
+by using XPath expressions. XMLSignature is and standard too, so it has been
+wide probed and examined. With XMLSignature the signed content is not replaced.
+Instead of that, a new xml element appears in the PNML file with the necessary
+information to validate the signature. 
+
+And this is the final stage of this thesis. There several ways to follow in further works. For example:
+
+\begin{itemize}
+\item In this thesis I have worked with very basic Petri nets, with only
+places transitions arcs and weights. This work can be extended to other kind
+of Petri nets, such as coloured Petri nets, High level Petri nets, fluid
+Petri nets, ...
+\item The properties of the subnets have not been studied from the point of view
+of the behaviour, contemplating markings and evolutions.  
+\end{itemize} 

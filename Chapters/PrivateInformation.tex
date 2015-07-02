@@ -128,8 +128,12 @@ If there is an arc from one transition to a place and an arc from that place
 to the same transition with the same weight, the sum (the matrix
 element associated to that place/transition) is zero , but there are
 two arcs.
-\item It does not matter the number of places and/or transitions that are chosen
-for the subnet, as long as they are not empty sets. 
+\item It does not matter the number of places and transitions that are chosen
+for the subnet, as long as they are not empty sets and have, at least one
+place and one transition. If it had only a place, it is a link place (there
+is an isolated row in the incidence matrix) and, if it had only a transition
+it would be a link transition (there is an isolated column in the incidence
+matrix).  
 \end{enumerate}
 
 
@@ -151,7 +155,8 @@ we reorder the incidence matrix so that places and transitions of the subnet
 are in the top-left.
 Without loss of
 generality, and for convenience, places and transitions can be renamed so that the incidence matrix
-is as follows: 
+is as follows:
+ 
 \[
 C=
 \kbordermatrix{
@@ -192,6 +197,7 @@ the definition.
 
 
 This can be generalized to multiple disjoint and complementary subnets without further to re-apply the same process to any of the subnets already defined. Thus, generically we can divide a network into $ i $ subnetworks, so we'll have a matrix of this style:
+
 \[
 \left(\begin{array}{ccc|ccc|c|ccc}
 a_{11} & \cdots & a_{1s} & a_{1(s+1)} & \cdots & a_{1t} &  & a_{1u} & \cdots & a_{1m}\\
@@ -209,6 +215,7 @@ a_{n1} & \cdots & a_{ns} & a_{n(s+1)} & \cdots & a_{nt} &  & a_{nu} & \cdots & a
 
 In this situation, if we select two subnets $ N_ {j} $ and $ N_ {k} $,
 we locate the zones of influence of each with respect to the other:
+
 \[
 \left(
 \begin{array}{c|c|c|c|c}
