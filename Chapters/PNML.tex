@@ -1440,7 +1440,7 @@ and we have this other PNML extended code:
 \end{lstlisting}
 
 Now this is one of the most important moment in this work: I will separate the inside
-and the outside of the subnet completely. Taking advantage of the process described in chapter \ref{Chapter: Subnets}, I have to extract the frontend from this subnet.
+and the outside of the subnet completely. Taking advantage of the process described in chapter \ref{Chapter: Subnets}, I have to extract the front-end from this subnet.
 
 In this case I have two \texttt{igp} (input gate to a place) and an \texttt{ogt} (output gate to a transition) with weight 2. The figure \ref{fig:PNML_InterfazSubredEjemplo1} illustrates the interface associated:
 
@@ -1455,7 +1455,7 @@ In this case I have two \texttt{igp} (input gate to a place) and an \texttt{ogt}
 \end{figure}
 
 
-And the figure \ref{fig:PNML_SubredEjemplo1} is the complete net including the subnet and its frontend.
+And the figure \ref{fig:PNML_SubredEjemplo1} is the complete net including the subnet and its front-end.
 
 \begin{figure}[htbp]
 \centering
@@ -1472,7 +1472,7 @@ this question I will define four new tags: \texttt{<interface>},
 \texttt{<gate>}, \texttt{<inscription>} and \texttt{<content>}. Let's explain them.
 
 As its name says, \texttt{<interface>} is
-the tag name for encapsulate the frontend. This tag has no attributes (just
+the tag name for encapsulate the front-end. This tag has no attributes (just
 the id, of course)
 but
 it has embedded the gates inside of it. These gates are represented by \texttt{<gate>}. This tag has two new attributes: \texttt{action} and \texttt{type}.
@@ -1601,7 +1601,7 @@ Petri net:
 \end{lstlisting}
 
 Once this is done, the only way to enter or leave the subnet is crossing
-the frontend, and I have reached my goal.
+the front-end, and I have reached my goal.
 
 This is a comprehensive definition of how to represent subnets in PNML. Now
 there are several ways to create a grammar extension that frame this structure

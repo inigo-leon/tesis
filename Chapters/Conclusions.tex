@@ -46,7 +46,7 @@ about security over Petri nets themselves.
 Once reviewed the state of the art, I enter into the study of subnets. The main goal is to find a structure of Petri subnets that is easily represented in other formats in addition to graphical mode.
 
 In this chapter I explain how to cut a Petri net into several subnets using the incidence matrix. The method of cutting into two subnets is studied. This method split the incidence matrix into four parts: the subnets per se and two other parts that defined the interaction between this two subnets ($N_1$,
-$N_2$, $PIM$ and $TIM$). This will allow us to define the frontend of a subnet in order to abstract is content from the rest of the net.
+$N_2$, $PIM$ and $TIM$). This will allow us to define the front-end of a subnet in order to abstract is content from the rest of the net.
 
 Once explained subnets, I make a subnet classification. This classification is based on the structure properties. So we can talk about:
 
@@ -61,9 +61,9 @@ outside towards a transition inside.
 \item source, if there is no arc entering the subnet
 \end{itemize}
 
-Then, one of the main parts of the thesis is studied: the subnet frontend.
+Then, one of the main parts of the thesis is studied: the subnet front-end.
 It is a very important concept because the rest of the thesis is based on
-it: if I define a subnet with its own frontend, I can know its behaviour without the necessity of knowing the internal structure. In this chapter, I introduce the critical concepts of frontend, input and output gates from
+it: if I define a subnet with its own front-end, I can know its behaviour without the necessity of knowing the internal structure. In this chapter, I introduce the critical concepts of front-end, input and output gates from
 places or transitions and attachable net that are going to be used later.
 
 This part of the Petri subnets theory is finished, so I can go on the representation
@@ -84,15 +84,15 @@ well known. It has de possibility of symmetric and asymmetric ciphering so
 the confidentiality of the information is ensured. This method of encryption replace tags in the xml file by encrypted content, only accessible by people
 that
 knows the right decrypting key. In this case, the tag replaced is \texttt{<content>}, inside
-the tag \texttt{<subnet>}. Once this is done only the frontend of the subnet
+the tag \texttt{<subnet>}. Once this is done only the front-end of the subnet
 is exposed, maintaining two properties:
 
 \begin{itemize}
 \item The structure of the entire net is not affected, because the interaction
-with elements of the subnet is always through the frontend.
+with elements of the subnet is always through the front-end.
 \item The information has been not deleted. It is hidden, waiting for somebody
 with the correct key.
-\item I can change one subnet by another if they have the same frontend,
+\item I can change one subnet by another if they have the same front-end,
 even though they are ciphered.
 \end{itemize} 
 
