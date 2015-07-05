@@ -15,13 +15,13 @@ For this literature review, I will follow the structure of this thesis:
 
 \begin{enumerate}
 \item First of all, I am going to describe some generalities of Petri nets
-as an introduction
-\item Then I will describe subnets and the process of splitting Petri nets
-into several subnets. Some of those subnets (or the complete net) are going to be secured. 
+as an introduction.
+\item Then I will describe subnets and the process of subnetting (splitting Petri nets
+into several subnets). Some of the defined subnets (or the complete net) are going to be secured. 
 \item The next step is to explain some possible Petri net representations
-and my selection of PNML for the securizing process
+and my choice of PNML for the securizing process.
 \item Once selected PNML, I am going to extend this language to support the
-subnets defined before
+subnets defined before.
 \item The last step is the securing properly speaking. To do this, I will use the standard XMLEncryption for ciphering the secret information and XMLSignature
 for integrity, authentication and non repudiation. \end{enumerate}
 
@@ -41,11 +41,11 @@ processes \cite{SM-Guasch2002}, discrete event systems \cite{EPN-Balbo1998}, ...
 \item Simulation of industrial applications \cite{SM-Jimenez2006159,SM-Latorre2013346}, logistic and production systems \cite{SM-Jimenez2004143},...
 \end{itemize} 
 
-This work is not about of Petri net application, so I am not
+This work is not about Petri nets applications, so I am not
 going to deepen this field. 
 However I really mind the intrinsic structure of them. Since the definition
 of Petri nets,
-many authors investigated about them. The basic basis of my work are some of the best Petri net researchers, who are included in this review:
+many authors investigated about them. The basic basis of my work are some of the best Petri net researchers of the world, who are included in this review:
 \begin{itemize}
 \item Murata, T \cite{G-Murata1977412,G-SM-Murata19772,G-Murata1989541}
 \item Silva, M \cite{G-Silva1985,G-Silva1993,G-Silva201213}
@@ -85,30 +85,30 @@ useful as \cite{PROP-Murata1977412,PROP-Engelfriet1991575,PROP-Silva1992447,PROP
 But they don't contribute in the main goal of my work. They are general references
 for the theoretical development. 
  
-Other fonts are authors that studied general theory on structure of systems, as Teruel \cite{G-Teruel1996271} is. 
+Other sources are authors that studied general theory on structure of systems, such as Teruel \cite{G-Teruel1996271} is. 
 
 But this work is not oriented towards studying all of these Petri net type.
 I want my work so general that it is easily exported to practically any kind
-of existing Petri nets or future Petri nets types that are not defined still.
+of existing Petri nets or future Petri nets types that maybe are not defined still.
 
 \section{Subnets}
 
 The study of subnets is very ancient with general works by Silva \cite{G-Silva1985,G-Silva201213},
-Murata \cite{G-Murata1977412,G-Murata1989541}, Peterson \cite{G-EPN-Peterson1981}. All of them have been very useful for my preparation and they are the theoretical basics of my work. But there are other more specific works that study several aspects of subnets.
+Murata \cite{G-Murata1977412,G-Murata1989541} and Peterson \cite{G-EPN-Peterson1981}. All of them have been very useful for my preparation and they are the theoretical basics of my work. But there are other more specific works that study several aspects of subnets.
 
 The first approach was presented by Valette \cite{SN-Valette197935}, who
-studied the possibility and properties of replacing of places or transitions by subnets.
+studied the possibility and properties of replacing places or transitions by subnets.
 Suzuki (in collaboration with Murata) \cite{SN-Suzuki198351} continued it
 with a method
 for expanding and reducing Petri nets. Basically, they wanted to substitute
 places and transitions by subnet and viceversa, maintaining the properties
 of the net. Druzhinin (and Yuditskii) \cite{SN-DRUZHININVA19921922} completed
 these works explaining how to construct regular Petri nets from standard subnets.
-But basically is an algorithm to replace places or transitions with well-formed
+But basically it is an algorithm to replace places or transitions with well-formed
 Petri nets. My contribution in this field is the description of a way to replace subnets (not only places or transitions) with other subnets. Their work can be seen as a particular
-case of my description of macroplace an macrotrasition. However I don't deepen the properties because it is not my goal.
+case of my description of macroplace an macrotrasition. However I don't deepen the properties because it is not my goal. This topic can be object of further investigations.
 
-Other works important in this section are Fahmy's ones \cite{SN-Fahmy1990321,SN-Fahmy1993127}.
+Other important works in this section are Fahmy's ones \cite{SN-Fahmy1990321,SN-Fahmy1993127}.
 At first sight (only reading the title), it seems to be the same I explain in the chapter \ref{Chapter: Subnets}. But
 this is not true. These two articles by Famhy are about the analysis of large Petri nets by cutting them into pieces. The second one \cite{SN-Fahmy1993127} is and extension of the first one \cite{SN-Fahmy1990321}. The idea is "divide
 and conquer" over the net. The partitioning of a net is useful because it preserves the properties of the original whole net. He centers the interest
@@ -134,7 +134,7 @@ there are other specific articles in this field:
 \begin{itemize}
 \item Hura \cite{REP-Hura1984865} introduced the state space representation of Petri nets, but with no possibility of subnet representation
 \item Anishimov and Perchuk \cite{REP-Anisimov198690} in their work "Representation
-of exchange protocols and Petri using finite sequential machine nets"didn't do exactly what the title says. They used High level Petri nets in order to define interaction protocols between two objects. These protocols are seen as more precise formal languages. Definitely, nothing seemed to my goal.   
+of exchange protocols and Petri using finite sequential machine nets" didn't do exactly what the title says. They used High level Petri nets in order to define interaction protocols between two objects. These protocols are seen as more precise formal languages. Definitely, nothing seemed to my goal.   
 \item Das \cite{REP-Das1987643} defined the
 reflexive incidence matrix (RIM) representation of Petri nets, The possibilities
 of represent subnets in this case is basically the same as 
@@ -152,7 +152,7 @@ matrix implementation of Petri nets for process planning. As it is matrix repres
  
 
 \section{PNML}
-PNML is a standard for representation of Petri nets. Because of that, the
+PNML is a W3C standard for representation of Petri nets. Because of that, the
 main source of information is internet. In particular the official site \url{www.pnml.org}
 \cite{PNML-pnml.org} has all the necessary information to work with it.
 
@@ -205,10 +205,9 @@ My intention is to securize part of a Petri net in two ways: hide and sign. The 
 is cutting the net in subnets, represent them in PNML and then one or more
 of this goals:
 \begin{itemize}
-\item hide it
-\item avoid unwanted changes
-\item ensure identity of the custodian of the Petri net
-\item avoid the impersonation of the custodian
+\item hide it.
+\item avoid unwanted changes.
+\item ensure identity of the custodian of the Petri net.\item avoid the impersonation of the custodian.
 \end{itemize}
 
 But there is not literature about the PNML representation for subnets, so
@@ -222,9 +221,8 @@ this is new knowledge.
 
 Both XMLEncryption and XMLSignature are W3C recommendations.
 
-XMLEncryption
-it is a way to cipher xml content. And not only that. Actually, it is a way to cipher any kind
-of information and store this ciphered content in xml format. In the same way, XMLSignature is a standard mode to sign xml or non xml content.
+XMLEncryption is a way to cipher xml content. And not only that. Actually, it is a way to encrypt any kind
+of information and store it in xml format. In the same way, XMLSignature is a standard mode to sign xml or non xml content.
 
  
 There are thousands
@@ -232,7 +230,7 @@ of articles and applications of it, but, as they are W3C recommendation, they ar
 
 In this work, I apply these technologies in order to achieve the next goals
 \begin{itemize}
-\item Privacy: hide a entire or a part of a petri net
+\item Privacy: hide a entire or a part of a petri net.
 \item Integrity: nobody should modify concrete parts of a Petri net without
 being detected.
 \item Authentication: guarantee that nobody can impersonate another, for
@@ -242,7 +240,7 @@ something in a Petri net (or part of it), for example, sign a Petri net.
 
 \end{itemize}
 
-In particular, encryption provides privacy. Digital signature provides
+In particular, encryption provides privacy and digital signature provides
 integrity, authentication and non repudiation. 
 
 

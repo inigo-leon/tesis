@@ -10,26 +10,27 @@
 \section{Background of the research}
 Petri nets are widespread for modeling many
 classes of systems, such as manufacturing logistics processes and services
-\citep{SM-Jimenez2004143,SM-Guasch2002}, concurrent systems \citep{EPN-Jensen2009}. However, all these nets are described in a comprehensive way and must have the information of the entire net to determine
+\citep{SM-Jimenez2004143,SM-Guasch2002}, concurrent systems \citep{EPN-Jensen2009},
+etc. However, all these nets are described in a comprehensive way and must have the information of the entire net to determine
 its evolution.
 Furthermore, these nets can be modified with no control of integrity or authoring,
 for example. 
 \section{Research problem}
 The problem occurs when somebody doesn't want to describe the whole subnet.
-Or, maybe, is wanted that one part of the process is only accessible for one
+Or, maybe, is wanted one part of the process to be only accessible for one
 specific person or entity.
 
 
 The first approach to solve this problem is to
-take two Petri nets
+take two Petri nets:
 
 
 \begin{itemize}
 \item
-One Petri Net with the public information, extracting the private data. This
+one Petri Net with only the public information, extracting the private data. This
 is an incomplete model of the process
 \item
-Another Petri Net with the whole information
+another Petri Net with the whole information
 for the interested person or entity.
 
 \end{itemize}  
@@ -50,7 +51,7 @@ It would be interesting to provide security to a Petri net:
 hiding a part of it. This can be useful, for example,
 distributing a process we want to be secret \citep{HID-Inigo2011MT},
 or simply to be a part of the net to be complex and do not
-interested handle for any reason \citep{HID-Inigo2011MT}.
+interest handle for any reason \citep{HID-Inigo2011MT}.
 
 \item avoiding not allowed changes in it (or a part of it).
 \item authenticating it (or a part of it). Useful to ensure who has developed
@@ -71,7 +72,7 @@ on this subnet, is encapsulated in a single point of execution. However,
 we want to go further by defining parts of the net that are hidden (not clustered) and what are the implications, studied within
 network properties.
 
-The main objective of this thesis is to take parts of a Petri nets and provide
+The main objective of this thesis is to extract parts (subnets) of a Petri net and provide
 them of wide security (privacy, integrity, authentication and non repudiation).
 
 
@@ -83,8 +84,8 @@ In order to achieve this goal, I have defined three milestones:
 
 \begin{enumerate}
 \item
-Extend Petri Nets definition in order to define subnets, abstracting the
-internal structure from the the rest of the net, focussing on hiding information. 
+Extend Petri Nets in order to define subnets, abstracting the
+internal structure from the the rest of the net using front ends, focussing on hiding information. 
 \item
 Choose a lossless and extendible representation
 of this kind of Petri Nets
@@ -102,21 +103,23 @@ in the study of the characteristics and properties of Petri nets and their
 subnets \citep{G-Murata1989541,G-Silva1985}.
 Also mention work already carried
 by other researchers in which we rely for
-our goal (i.e. \citep{SM-Silva19931,EPN-David2010,EPN-Jensen2009,G-EPN-Peterson1981}). All this will be necessary to create the framework that allows us to study occultation in Petri nets. We will expand the vision of Petri nets, providing them with greater functionality,
+our goal (i.e. \citep{SM-Silva19931,EPN-David2010,EPN-Jensen2009,G-EPN-Peterson1981}). All of this will be necessary to create the framework that allows us to study occultation in Petri nets. We will expand the vision of Petri nets, providing them with greater functionality,
 such us attachable subnet.
 
 The next step in this work is to choose (or define) a flexible representation of Petri
 nets that allows us to translate the previous extended nets. This representation has to be really extendible and flexible in order to be able to show actual and future characteristics of Petri nets.
 I can advance you that the selected representation is the standard PNML and I have to define and extension for it in order to represent subnets that are going to
-be hidden.
+be secured.
 
-Once selected this representation, the last step is the hiding and signing method. Once
-more, I bet for standard protocols like XMLEncription and XMLSignature.
+Once selected this representation, the last step is the hiding and signing
+method(digital signature provide integrity, authentication and
+no repudiation services). Once
+more, I bet for standard protocols like XMLEncryption and XMLSignature.
 
 This is a very basic investigation because I extend the very early
 definitions of Petri nets. Because of it, the results of this thesis is very probably extensible to any other development whose base are the classic Petri Nets. For example, I am not going to study colored Petri nets, neither timed
 Petri nets, etc. But it is very easy to see that the results achieved in
-this thesis can be applied to them with no problem.  
+this thesis can be applied to them with little problems.  
 
 \section{Delimitations of scope and key assumptions}  
 For this work we will always deal with ordinary and pure networks, unless otherwise expressly. This assumption is only for clarity reasons, because
