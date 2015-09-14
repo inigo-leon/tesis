@@ -196,8 +196,8 @@ As I have explained in the Literature review in the chapter \ref{Chapter: Litera
 
 The advantages over the other three representation ways described before
 are clear. By one side, XML is a widely extended format to represent almost
-everything. And not only that. XML is a robust technology free of errors
-and it is really flexible. Its flexibility come from the possibility of adding any kind
+everything. In the other side, XML is a robust technology free of errors
+and it is really flexible. Its flexibility comes from the possibility of adding any kind
 of labels and functionality with a very little amount of work. Its robustness come from the strict
 specification of the schemas declared to define completely the XML files    
 that support. Once
@@ -214,7 +214,7 @@ software, it is necessary to store this kind of information.
 
 In this work, I am going to study only basic Petri nets, but
 that concept and the method is easily exportable to other kind of nets, such as Symmetric nets and High Level Petri nets (that are representable in PNML
-format too.)
+format too).
 
 \subsection{Scope}
 The scope of this work in this section is basically bounded by the original
@@ -251,11 +251,11 @@ be used as "subnets". So I am going to extend the language in order to get sever
 \end{enumerate}
 
 As we can think, definition of several subnets of a Petri net is possible
-and the connection over them are always through their respective interfaces.
+and the connection over them is always through their respective interfaces.
 
 \subsection{PNML grammar}
 
-As PNML is an xml based language it has to be described by an schema that define the creation rules of the PNML representation of a Petri net.
+As PNML is an xml based language it has to be described by a schema that define the creation rules of the PNML representation of a Petri net.
 
 The grammar is defined since 2009 and updated until
 2012, which is the most recent revision.
@@ -269,7 +269,7 @@ In this section I am going to explain several characteristics of PNML files.
 With these explanations it is going to be easier the understanding of PNML
 structure.
 
-First of all, as PNML files are xml files, there several things to know:
+First of all, as PNML files are xml files, there are several things to know:
 
 \begin{enumerate}
 \item 
@@ -303,7 +303,7 @@ unambiguously. So there cannot
 
  
 
-With this three observations, we can have an idea about how a PNML file
+With these three observations, we can have an idea about how a PNML file
 is structured:  
 
  
@@ -321,13 +321,13 @@ is structured:
 </pnml>
 \end{lstlisting}
 
-Once this structure is defined, I am going to explain the next stage, that
+Once this structure is defined, I am going to explain the next stage, which
 is the most important one in this work. 
 
 \subsubsection{Places, transitions and arcs in PNML}
 
 As Petri nets have three main elements (places, transitions
-and arcs), PNML has them too. These three elements have several things in common in an PNML file:
+and arcs), PNML has them too. These three elements have several things in common in a PNML file:
 \begin{itemize}
   \item They are all nested in a tag \texttt{<page>} .
 
@@ -379,7 +379,7 @@ for places]
 </place>
 \end{lstlisting}
 
-Transitions are represented with the tag \texttt{<transition>}.Except the initial marking, it is really similar to a place. This is an example of a transition in PNML: 
+Transitions are represented with the tag \texttt{<transition>}. Except the initial marking, it is really similar to a place. This is an example of a transition in PNML: 
 
 \begin{lstlisting}[label=pmnl_transition,caption=PNML representation
 for transitions]
@@ -397,8 +397,8 @@ for transitions]
 </transition>
 \end{lstlisting}
 
-Arcs are represented with the tag \texttt{<arc>}. Arc
-have to have a source and a target, which are defined by the attributes \texttt{source} and \texttt{target} that have to point to a transition and a place, identified
+Arcs are represented with the tag \texttt{<arc>}. Arcs
+must have a source and a target, which are defined by the attributes \texttt{source} and \texttt{target} that have to point to a transition and a place, identified
 by their \texttt{id}. Furthermore, the arc weight can be fixed by the tag \texttt{<inscription>}.
 If the weight is one, the tag inscription is not necessary because this is
 the default value. This is an example of the arc with weight 3 that connects the place and the
@@ -505,7 +505,7 @@ for a basic Petri net]
 I think that this last listing is clear enough to understand the rest of
 the process. But not only that. For even more clarity, the tags \texttt{<?xml>}, \texttt{<pnml>}, \texttt{<net>} and \texttt{<page>} are going to be obviated
 too. So in many of the later examples they will not be present. Applying
-this criterium, the listing \ref{pmnl_basic_representation} change to:
+this criterion, the listing \ref{pmnl_basic_representation} changes to:
 
 \begin{lstlisting}[label=pmnl_simplified_representation,caption=Simplified PNML representation
 for a basic Petri net]
@@ -1388,11 +1388,11 @@ in this way:
 \begin{enumerate}
 \item The places and transitions inside the subnet are moved into the tag
 \texttt{<subnet>}.
-\item The arcs linking two elements that are both inside the subnet will be moved to
+\item The arcs linking two elements that are both inside the subnet will be moved
 
  into this new tag too.
 \item The arcs entering or leaving the subnet will be copied inside the tag.
-This mean that there are arcs duplicated inside and outside the tag.
+This means that there are arcs duplicated inside and outside the tag.
 \end{enumerate}
 
 
@@ -1439,7 +1439,7 @@ and we have this other PNML extended code:
 <arc id="a7" source="t2" target="p1"/>
 \end{lstlisting}
 
-Now this is one of the most important moment in this work: I will separate the inside
+Now this is one of the most important moments in this work: I will separate the inside
 and the outside of the subnet completely. Taking advantage of the process described in chapter \ref{Chapter: Subnets}, I have to extract the front-end from this subnet.
 
 In this case I have two \texttt{igp} (input gate to a place) and an \texttt{ogt} (output gate to a transition) with weight 2. The figure \ref{fig:PNML_InterfazSubredEjemplo1} illustrates the interface associated:
@@ -1482,7 +1482,7 @@ whether the gate is an input or an output gate. The other attribute,
 \texttt{type}, can take other two values: \texttt{place} and \texttt{transition}.
 As arcs have weight, gates have it too. For being in accordance, I define
 the tag \texttt{<inscription>} embedded in the tag \texttt{<gate>}. It has the weight of the arc associated. In the same way that with arcs, if they
-have weight 1 this tag can be obviated.\ 
+have weight 1 this tag can be obviated. 
 
 There is one other tag \texttt{<content>} that
 probably at this moment seems useless, but it is necessary for the rest of the process, as we will see in the next chapter. So I am going to introduce it now. This tag is used to encapsulate the rest of the subnet outside the interface. That is, \texttt{<subnet>} has two children:
@@ -1540,7 +1540,7 @@ the arcs that are repeated inside and outside the net changing their id and
 source or target, depending on where is it:
 
 \begin{itemize}
-\item Change the name of one of the copies of the arc.
+\item Change the id of one of the copies of the arc.
 \item If the arc is \textbf{entering} the subnet
   \begin{itemize}
   \item For the \texttt{<arc>} tag inside the tag \texttt{<subnet>}, the \textbf{source} attribute of the arc is changed by the \textbf{input} gate associated
@@ -1553,7 +1553,7 @@ source or target, depending on where is it:
   \end{itemize}
 \end{itemize}
 
-Applying again this rule to the example we have the definitive code for this
+Applying again these rules to the example we have the definitive code for this
 Petri net:
 
 \begin{lstlisting}[label=pmnl_final_representation,caption=Final PNML representation]
@@ -1605,7 +1605,7 @@ the front-end, and I have reached my goal.
 
 This is a comprehensive definition of how to represent subnets in PNML. Now
 there are several ways to create a grammar extension that frame this structure
-of xml. For example, we can define a dtd file\cite{PNML-dtd}, and xsd file
+of xml. For example, we can define a dtd file\cite{PNML-dtd}, a xsd file
 \cite{PNML-xsd1,PNML-xsd2} or, by coherence with the original grammar of PNML, a Relax NG file \cite{PNML-relaxng.org}. I have defined a way to represent subnets, but the formal grammar is outside the scope of my work because of the wide casuistry of these Petri net types.
 However, the method is explained enough in order to each one of these types to define their own extension. 
 

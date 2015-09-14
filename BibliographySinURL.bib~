@@ -5,7 +5,7 @@
 	year = 2011
 }
 @Article{G-Silva1989374,
-	author = {SILVA, M; VALETTE, R},
+	author = {Silva, M; Valette, R},
 	title = {PETRI NETS AND FLEXIBLE MANUFACTURING},
 	journal = {Advances in Petri Nets},
 	year = 1989,
@@ -153,9 +153,9 @@
 	source = {Scopus}
 }
 @Article{SN-DRUZHININVA19921922,
-	author = {DRUZHININ, VA; YUDITSKII, SA},
-	title = {CONSTRUCTION OF WELL-FORMED PETRI NETS FROM STANDARD SUBNETS },
-	journal = {AUTOMATION AND REMOTE CONTROL},
+	author = {Druzhinin, Va; Yuditskii, Sa},
+	title = {Construction of well-formed Petri nets from standard subnets},
+	journal = {Automation and Remote Control},
 	year = 1992,
 	volume = 53,
 	number = 12,
@@ -244,9 +244,9 @@
 	source = {Scopus}
 }
 @Article{REP-Malyugin1987696,
-	author = {MALYUGIN, V.D.},
-	title = {ARITHMETICAL REPRESENTATION OF PETRI NETS},
-	journal = {AUTOMATION AND REMOTE CONTROL},
+	author = {Malyugin, V.D.},
+	title = {Arithmethical representation of Petri nets},
+	journal = {Automation and Remote Control},
 	year = 1987,
 	volume = 48,
 	number = 5,
