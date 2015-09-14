@@ -214,7 +214,7 @@
 
 \thesistitle{Security in Petri nets sharing and storage: subnets, privacy, integrity, authentication and non repudiation} % Your thesis title - this is used in the title and abstract
 %-------------------------------------------------  
-\supervisor{Dr. Juan Ignacio \textsc{Latorre} \\ Dr. Mercedes \textsc{P\'erez}} % You supervisor's name - this is used in the title page
+\supervisor{Dr. Emilio \textsc{Jim\'enez} \\Dr. Juan Ignacio \textsc{Latorre}} % You supervisor's name - this is used in the title page
 %-------------------------------------------------   
 \examiner{} % Your examiner's name - this is not currently used anywhere in the template, cite it with \examname if you want it
 %-------------------------------------------------   
