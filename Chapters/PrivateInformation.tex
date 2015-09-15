@@ -280,6 +280,7 @@ A subnet is disjoint iif its incidence submatrix is the null matrix.
 The demonstration is trivial.
 
 \begin{example}
+\label{ej:petri_net}
 Consider the next well-printed Petri net and its incidence matrix:
 \[
 \begin{matrix}\includegraphics[width=0.3\textwidth]{Figures/EleccionSubredZonasInfluencia_1.eps}\end{matrix}
@@ -575,6 +576,94 @@ subnet.
 
 
 
+\subsubsection{Link transition and link place}
+
+Once done a partition of a net, maybe we want to have places or transitions that are not included in other subnets. In these cases we talk about link
+transitions or link places.
+In those cases, the matrix has isolated columns
+or rows respectively.
+
+\begin{example}
+Let's take again the Petri net defined in example \ref{ej:petri_net} and
+its incidence matrix.
+
+\[
+\begin{matrix}\includegraphics[width=0.3\textwidth]{Figures/EleccionSubredZonasInfluencia_1.eps}\end{matrix}
+\ \ \ \ \ \ 
+C=
+\kbordermatrix{
+   & t_1 & t_2 & t_3 & t_4\\
+p_1& -1 &  1  &  0  &  1 \\
+p_2&  1 & -1  &  1  &  0 \\
+p_3&  0 &  1  & -1  &  0 \\
+p_4&  0 &  0  &  1  & -1 \\
+p_5&  0 &  0  &  0  &  1 \\
+}
+\]
+
+Now we are going to define two subnets in this way:\begin{itemize}
+\item $N1=p_1, p_2, t_1$
+\item $N2=p_3, p_4, p_5, t_3, t_4$
+\end{itemize}
+
+As we can see, $t_2$ is outside both nets so it is a link transition
+ 
+
+\begin{figure}[htbp]
+\centering
+\[
+\begin{matrix}\includegraphics[width=0.4\textwidth]{Figures/link_transition.eps}\end{matrix}
+\ \ \ \ \ \ 
+C=
+\kbordermatrix{
+   & t_1 & \vline & t_3 & t_4 & & \color{blue}t_2\\
+p_1& -1 & \vline   &  0  &  1 & |& \color{blue}1\\
+p_2&  1 & \vline   &  1  &  0 & |& \color{blue}-1\\
+\cline{1-5}
+p_3&  0 & \vline   & -1  &  0 & | & \color{blue}1\\
+p_4&  0 & \vline   &  1  & -1 & |& \color{blue}0\\
+p_5&  0 & \vline   &  0  &  1 & |& \color{blue}0\\
+}
+\]
+\rule{35em}{0.5pt}
+\caption{Link transition}
+\label{fig:link_transition}
+\end{figure}
+
+In the matrix we can see an isolated column $t_2$.
+
+Is the same way, if we want $p_3$ to be outside, instead of $t_1$, it is
+a place transition an we have
+this other figure:
+
+\begin{figure}[htbp]
+\centering
+\[
+\begin{matrix}\includegraphics[width=0.4\textwidth]{Figures/link_place.eps}\end{matrix}
+\ \ \ \ \ \ 
+C=
+\kbordermatrix{
+   & t_1 & \vline & t_2 & t_3 & t_4\\
+p_1& -1 & \vline   & 1 &  0  &  1\\
+p_2&  1 & \vline   & -1 &  1  &  0\\
+\hline
+p_4&  0 & \vline   & 0 &  1  & -1\\
+p_5&  0 & \vline   & 0 &  0  &  1\\
+\cdashline{2-6}
+\color{blue}p_3&  \color{blue}0 &    & \color{blue}1 & \color{blue}-1  &  \color{blue}0\\
+}
+\]
+\rule{35em}{0.5pt}
+\caption{Link place}
+\label{fig:link_place}
+\end{figure}
+
+In the matrix we can see an isolated row $p_3$.
+
+In general, link transitions and link places can be seen as subnets with
+one only element.
+\end{example}
+
 
 \subsection{Matrix parts description once defined the subnets}
 
@@ -690,6 +779,12 @@ p_4&  0 &  1  & \vline &  0  & -1 \\
 
 Interpreting each of the chunks of the matrix is similar to the previous example.
 \end{example}
+
+\begin{note}
+As my goal is to hide one subnet, link transitions and link places can be
+seen as elements of the visible subnet, without loss of generality.
+So in the next sections the existence of these kind of elements is not going to be contemplated.
+\end{note}
 
 
 \subsection{Front-end interaction with the subnet. Input and output functions}
