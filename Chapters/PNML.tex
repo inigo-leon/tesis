@@ -360,7 +360,7 @@ go on the particular characteristics of each one of them.
 Places are represented with the tag \texttt{<place>} and the can have a marking with the tag \texttt{<initialMarking>}.
 Here we have an example of a place with two tokens in PNML: 
 
-\begin{lstlisting}[label=pmnl_place,caption=PNML representation
+\begin{lstlisting}[label=pnml_place,caption=PNML representation
 for places]
 <place id="p1">
   <name>
@@ -381,7 +381,7 @@ for places]
 
 Transitions are represented with the tag \texttt{<transition>}. Except the initial marking, it is really similar to a place. This is an example of a transition in PNML: 
 
-\begin{lstlisting}[label=pmnl_transition,caption=PNML representation
+\begin{lstlisting}[label=pnml_transition,caption=PNML representation
 for transitions]
 <transition id="t1">
   <name>
@@ -404,7 +404,7 @@ If the weight is one, the tag inscription is not necessary because this is
 the default value. This is an example of the arc with weight 3 that connects the place and the
 transition of the previous examples in PNML: 
 
-\begin{lstlisting}[label=pmnl_arc,caption=General PNML representation
+\begin{lstlisting}[label=pnml_arc_general,caption=General PNML representation
 for arcs with arbitrary weight]
 <arc id="a1" source="p1" target="t1">
   <inscription> 3 </inscription>
@@ -412,14 +412,14 @@ for arcs with arbitrary weight]
 \end{lstlisting}
 
 And this is the same example but with weight 1, that is obviated:
-\begin{lstlisting}[label=pmnl_arc,caption=PNML representation
+\begin{lstlisting}[label=pnml_arc_weight_1_1,caption=PNML representation
 for arcs of weight 1]
 <arc id="a1" source="p1" target="t1">
 </arc>
 \end{lstlisting}
 
 or the same
-\begin{lstlisting}[label=pmnl_arc,caption=PNML representation
+\begin{lstlisting}[label=pnml_arc_weight_1_2,caption=PNML representation
 for arcs of weight 1]
 <arc id="a1" source="p1" target="t1"/>
 \end{lstlisting}
@@ -431,7 +431,7 @@ If we take the last examples all together, we can represent the following Petri 
 \includegraphics[width=0.3\textwidth]{Figures/PNML-RdPBasicaCompleta.eps}
 \]
 
-\begin{lstlisting}[label=pmnl_complete_representation,caption=Complete PNML representation
+\begin{lstlisting}[label=pnml_complete_representation,caption=Complete PNML representation
 for a basic Petri net]
 <?xml version="1.0" encoding="utf-8"?>
 <pnml>
@@ -481,7 +481,7 @@ For clarity, I am going to obviate several options. I am not going to draw the g
 \includegraphics[width=0.11\textwidth]{Figures/PNML-RdPBasica.eps}
 \]
 
-\begin{lstlisting}[label=pmnl_basic_representation,caption=Basic PNML representation
+\begin{lstlisting}[label=pnml_basic_representation,caption=Basic PNML representation
 for a basic Petri net]
 <?xml version="1.0" encoding="utf-8"?>
 <pnml>
@@ -505,9 +505,9 @@ for a basic Petri net]
 I think that this last listing is clear enough to understand the rest of
 the process. But not only that. For even more clarity, the tags \texttt{<?xml>}, \texttt{<pnml>}, \texttt{<net>} and \texttt{<page>} are going to be obviated
 too. So in many of the later examples they will not be present. Applying
-this criterion, the listing \ref{pmnl_basic_representation} changes to:
+this criterion, the listing \ref{pnml_basic_representation} changes to:
 
-\begin{lstlisting}[label=pmnl_simplified_representation,caption=Simplified PNML representation
+\begin{lstlisting}[label=pnml_simplified_representation,caption=Simplified PNML representation
 for a basic Petri net]
 <place id="p1">
   <initialMarking>
@@ -1556,7 +1556,7 @@ source or target, depending on where is it:
 Applying again these rules to the example we have the definitive code for this
 Petri net:
 
-\begin{lstlisting}[label=pmnl_final_representation,caption=Final PNML representation]
+\begin{lstlisting}[label=pnml_final_representation,caption=Final PNML representation]
 <subnet id="sn1">
   <interface id="sn1-interface">
     <gate id="igp1" action="input" type="place"/>
